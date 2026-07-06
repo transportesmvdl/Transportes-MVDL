@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MVDL Transportes | Transporte de Alimentos e Serviços HR</title>
+    <meta name="description" content="MVDL Transportes - Transporte de alimentos, serviços HR e apoio operacional com atuação em São Paulo / Jandira." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+         :root {
+            --primary: #050505;
+            --primary-2: #101010;
+            --primary-3: #1a1a1a;
+            --accent: #c9a227;
+            --accent-2: #f0d77a;
+            --accent-dark: #9f7d1a;
+            --white: #ffffff;
+            --light: #fbfaf6;
+            --light-2: #f3ecd9;
+            --text: #111111;
+            --muted: #666666;
+            --border: #e3d6ad;
+            --success: #1f9d61;
+            --shadow: 0 20px 50px rgba(0, 0, 0, .14);
+            --shadow-soft: 0 12px 28px rgba(0, 0, 0, .08);
+            --transition: all .3s ease;
+            --container: 1260px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: var(--light);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 90px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: rgba(201, 162, 39, .10);
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            font-size: clamp(30px, 4vw, 48px);
+            font-weight: 900;
+            color: var(--primary);
+            letter-spacing: -.8px;
+            margin-bottom: 14px;
+        }
+        
+        .section-subtitle {
+            max-width: 760px;
+            margin: 0 auto;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 999px;
+            padding: 15px 26px;
+            font-weight: 800;
+            transition: var(--transition);
+        }
+        
+        .btn-accent {
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #111111;
+            box-shadow: 0 12px 28px rgba(201, 162, 39, .28);
+        }
+        
+        .btn-accent:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(201, 162, 39, .36);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, .18);
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, .05);
+        }
+        
+        .topbar {
+            background: #030303;
+            color: #f3e7bf;
+            font-size: 13px;
+            padding: 11px 0;
+        }
+        
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .topbar-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .topbar-group span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(5, 5, 5, .94);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+        }
+        
+        .navbar {
+            min-height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 26px;
+            font-weight: 900;
+            color: var(--white);
+        }
+        
+        .logo-mark {
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #b68b1e, #f0d77a);
+            color: #111111;
+            box-shadow: 0 12px 26px rgba(201, 162, 39, .30);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        nav a {
+            color: #f7f1dc;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(95deg, rgba(5, 5, 5, .96) 0%, rgba(5, 5, 5, .90) 45%, rgba(5, 5, 5, .58) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, rgba(201, 162, 39, .20), transparent 28%), linear-gradient(to top, rgba(5, 5, 5, .38), transparent);
+        }
+        
+        .hero-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 40px;
+            align-items: center;
+            padding: 80px 0;
+        }
+        
+        .hero-title {
+            font-size: clamp(42px, 5vw, 74px);
+            line-height: 1.02;
+            letter-spacing: -1.4px;
+            color: var(--white);
+            font-weight: 900;
+            margin-bottom: 22px;
+        }
+        
+        .hero-title span {
+            color: var(--accent);
+        }
+        
+        .hero-text p {
+            max-width: 700px;
+            color: #efe4c5;
+            line-height: 1.9;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+        
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .hero-badge i {
+            color: var(--accent-dark);
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-panel,
+        .service-card,
+        .fleet-card,
+        .contact-card,
+        .contact-form,
+        .process-card,
+        .faq-item {
+            border: 1px solid rgba(201, 162, 39, .18);
+        }
+        
+        .hero-panel {
+            background: rgba(255, 255, 255, .98);
+            border-radius: 24px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero-panel h3 {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+        
+        .hero-panel p {
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        
+        .panel-list {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .panel-list div {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            color: var(--text);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        
+        .panel-list i,
+        .service-icon,
+        .contact-item i {
+            background: rgba(201, 162, 39, .12);
+            color: var(--accent-dark);
+        }
+        
+        .trust-bar {
+            margin-top: -35px;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .trust-grid {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 16px;
+        }
+        
+        .trust-item h3 {
+            font-size: 30px;
+            color: var(--primary);
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+        
+        .trust-item p {
+            color: var(--muted);
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            min-height: 480px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-content p {
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+        
+        .check-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+            margin-top: 22px;
+        }
+        
+        .check-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            line-height: 1.7;
+        }
+        
+        .check-list i {
+            color: var(--accent-dark);
+        }
+        
+        .highlight-band {
+            margin-top: 24px;
+            padding: 20px 22px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(5, 5, 5, .03), rgba(201, 162, 39, .12));
+            border: 1px solid rgba(201, 162, 39, .24);
+        }
+        
+        .highlight-band strong {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--primary);
+        }
+        
+        .highlight-band span {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        
+        .services {
+            background: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .service-card {
+            background: linear-gradient(180deg, #ffffff, #fcfbf7);
+            border-radius: 24px;
+            padding: 28px 24px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover,
+        .fleet-card:hover,
+        .process-card:hover {
+            transform: translateY(-6px);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+        
+        .service-card h4 {
+            font-size: 19px;
+            color: var(--primary);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+        
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            border-radius: 30px;
+            padding: 44px 30px;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+        
+        .quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        
+        .quote-box h3 {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+        
+        .quote-box p {
+            color: #ede2c3;
+            line-height: 1.9;
+        }
+        
+        .quote-card {
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: 22px;
+            padding: 24px;
+        }
+        
+        .quote-card ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+        }
+        
+        .quote-card li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            color: #f8f2df;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        
+        .quote-card i {
+            color: var(--accent-dark);
+        }
+        
+        .fleet-grid,
+        .process-grid {
+            display: grid;
+            gap: 24px;
+        }
+        
+        .fleet-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .process-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .fleet-card {
+            background: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        
+        .fleet-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        
+        .fleet-content {
+            padding: 24px;
+        }
+        
+        .fleet-content h4 {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        
+        .fleet-content p {
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .fleet-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(201, 162, 39, .10);
+            color: var(--accent-dark);
+            font-size: 12px;
+            font-weight: 800;
+        }
+        
+        .process-card {
+            background: var(--white);
+            border-radius: 22px;
+            padding: 28px 22px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .process-number {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            color: #111111;
+            font-weight: 900;
+            box-shadow: 0 10px 22px rgba(201, 162, 39, .22);
+        }
+        
+        .process-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 800;
+        }
+        
+        .process-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .faq-wrap {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 16px;
+        }
+        
+        .faq-item {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .faq-question {
+            width: 100%;
+            border: none;
+            background: none;
+            padding: 22px 24px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease;
+        }
+        
+        .faq-answer p {
+            padding: 0 24px 22px;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+        
+        .contact-card,
+        .contact-form {
+            background: var(--white);
+            border-radius: 26px;
+            padding: 32px;
+            box-shadow: var(--shadow-soft);
+        }
+        
+        .contact-card h3,
+        .contact-form h3 {
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+        
+        .contact-card p {
+            color: var(--muted);
+            line-height: 1.8;
+        }
+        
+        .contact-list {
+            display: grid;
+            gap: 16px;
+            margin-top: 22px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        
+        .contact-item i {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+        }
+        
+        .contact-item strong {
+            display: block;
+            color: var(--primary);
+            margin-bottom: 4px;
+            font-size: 15px;
+        }
+        
+        .contact-item span {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+        
+        .form-grid {
+            display: grid;
+            gap: 14px;
+        }
+        
+        .form-grid input,
+        .form-grid textarea {
+            width: 100%;
+            padding: 15px 16px;
+            border: 1.5px solid var(--border);
+            border-radius: 14px;
+            outline: none;
+            font-size: 14px;
+            resize: none;
+            transition: var(--transition);
+        }
+        
+        .form-grid input:focus,
+        .form-grid textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(201, 162, 39, .10);
+        }
+        
+        .btn-dark {
+            background: var(--primary);
+            color: var(--white);
+        }
+        
+        .btn-dark:hover {
+            background: var(--primary-2);
+            transform: translateY(-2px);
+        }
+        
+        .cta-box {
+            border-radius: 30px;
+            padding: 70px 28px;
+            text-align: center;
+            background: linear-gradient(100deg, rgba(5, 5, 5, .96), rgba(16, 16, 16, .93)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80') center/cover;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+        
+        .cta-box h2 {
+            font-size: clamp(30px, 4vw, 48px);
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        
+        .cta-box p {
+            max-width: 760px;
+            margin: 0 auto 28px;
+            color: #ede2c3;
+            line-height: 1.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        
+        footer {
+            background: linear-gradient(180deg, #050505, #0a0a0a);
+            color: var(--white);
+            margin-top: 90px;
+        }
+        
+        .footer-top {
+            padding: 70px 0 35px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            gap: 28px;
+        }
+        
+        .footer-brand .logo {
+            margin-bottom: 14px;
+        }
+        
+        .footer-brand p,
+        .footer-col p,
+        .footer-col a {
+            color: #dfd5b7;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        
+        .footer-col h4 {
+            font-size: 17px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: var(--white);
+        }
+        
+        .footer-links {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(255, 255, 255, .07);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            color: #111111;
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            padding: 18px 0;
+            text-align: center;
+            color: #bcae83;
+            font-size: 13px;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 999px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 12px 28px rgba(37, 211, 102, .35);
+            z-index: 9999;
+            font-weight: 800;
+        }
+        
+        @media (max-width: 1100px) {
+            .hero-grid,
+            .about-grid,
+            .contact-grid,
+            .quote-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid,
+            .process-grid,
+            .fleet-grid,
+            .trust-grid,
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 860px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                position: absolute;
+                top: 84px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                max-height: 0;
+                overflow: hidden;
+                transition: .3s ease;
+            }
+            nav.active {
+                max-height: 420px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                padding: 10px 0;
+            }
+            nav li {
+                width: 100%;
+            }
+            nav a {
+                display: block;
+                width: 100%;
+                padding: 14px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, .06);
+            }
+            .services-grid,
+            .process-grid,
+            .fleet-grid,
+            .trust-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 580px) {
+            .section {
+                padding: 75px 0;
+            }
+            .hero {
+                background-attachment: scroll;
+            }
+            .hero-panel,
+            .contact-card,
+            .contact-form {
+                padding: 22px;
+            }
+            .cta-box,
+            .quote-section {
+                padding: 50px 20px;
+            }
+            .whatsapp-float span {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-group">
+                <span><i class="fa-solid fa-phone-volume"></i> +55 11 96360-2617</span>
+                <span><i class="fa-brands fa-whatsapp"></i> WhatsApp comercial</span>
+            </div>
+            <div class="topbar-group">
+                <span><i class="fa-solid fa-location-dot"></i> São Paulo / Jandira</span>
+                <span><i class="fa-brands fa-instagram"></i> @storemvdl</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container navbar">
+            <a href="#inicio" class="logo">
+                <div class="logo-mark"><i class="fa-solid fa-truck-fast"></i></div>
+                MVDL <span>Transportes</span>
+            </a>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#orcamento">Orçamento</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <div class="eyebrow">Transporte com presença premium</div>
+                <h1 class="hero-title">
+                    Transporte de alimentos e serviços HR com <span>imagem forte, profissional e confiável</span>
+                </h1>
+                <p>
+                    A <strong>MVDL Transportes</strong> atua com transporte de alimentos, serviços HR e apoio operacional, com foco em organização, responsabilidade e atendimento direto. Também realiza
+                    <strong>transportes de HR para alimentos do Mega100</strong>, reforçando credibilidade e posicionamento profissional.
+                </p>
+
+                <div class="hero-badges">
+                    <div class="hero-badge"><i class="fa-solid fa-truck-fast"></i> Agilidade</div>
+                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Confiança</div>
+                    <div class="hero-badge"><i class="fa-solid fa-headset"></i> Atendimento direto</div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#orcamento" class="btn btn-accent">
+                        <i class="fa-solid fa-file-signature"></i> Solicitar orçamento
+                    </a>
+                    <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-outline">
+                        <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-panel">
+                <h3>Apresentação profissional da sua operação</h3>
+                <p>
+                    Estrutura visual premium para transmitir mais autoridade, seriedade e confiança aos seus clientes.
+                </p>
+
+                <div class="panel-list">
+                    <div><i class="fa-solid fa-check"></i><span>Transporte de alimentos com postura profissional</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Serviços HR com apresentação forte</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Presença digital mais confiável</span></div>
+                    <div><i class="fa-solid fa-check"></i><span>Contato rápido via WhatsApp e Instagram</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h3>SP</h3>
+                    <p>Atuação São Paulo / Jandira</p>
+                </div>
+                <div class="trust-item">
+                    <h3>HR</h3>
+                    <p>Operações de transporte HR</p>
+                </div>
+                <div class="trust-item">
+                    <h3>M100</h3>
+                    <p>Referência à operação Mega100</p>
+                </div>
+                <div class="trust-item">
+                    <h3>100%</h3>
+                    <p>Foco em atendimento profissional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="sobre">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80" alt="MVDL Transportes">
+            </div>
+
+            <div class="about-content">
+                <div class="eyebrow">Sobre a empresa</div>
+                <h2 class="section-title">Uma apresentação mais premium para valorizar seu serviço</h2>
+                <p>
+                    A <strong>MVDL Transportes</strong> foi posicionada com um visual mais forte, elegante e profissional para transmitir autoridade em transporte de alimentos, serviços HR e apoio operacional.
+                </p>
+                <p>
+                    Com atuação em <strong>São Paulo / Jandira</strong>, a empresa reforça sua presença com comunicação direta, identidade marcante e foco em transmitir mais confiança no atendimento comercial.
+                </p>
+
+                <ul class="check-list">
+                    <li><i class="fa-solid fa-check"></i> Transporte de alimentos</li>
+                    <li><i class="fa-solid fa-check"></i> Serviços HR</li>
+                    <li><i class="fa-solid fa-check"></i> Apoio operacional</li>
+                    <li><i class="fa-solid fa-check"></i> Transportes de HR para alimentos do Mega100</li>
+                </ul>
+
+                <div class="highlight-band">
+                    <strong>Destaque estratégico</strong>
+                    <span>Site com identidade visual premium para passar uma imagem mais forte, profissional e confiável.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Serviços</div>
+                <h2 class="section-title">Soluções da MVDL Transportes</h2>
+                <p class="section-subtitle">
+                    Estrutura clara para apresentar os principais serviços de forma elegante e comercial.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <h4>Transporte de Alimentos</h4>
+                    <p>Atendimento com responsabilidade e organização para operações ligadas ao transporte de alimentos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    <h4>Serviços HR</h4>
+                    <p>Operações de HR com apresentação profissional e foco em credibilidade comercial.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <h4>Apoio Operacional</h4>
+                    <p>Suporte em demandas operacionais, logística e serviços complementares de transporte.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h4>Outros Serviços</h4>
+                    <p>Atendimento flexível para outras necessidades ligadas à operação e movimentação de serviços.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="orcamento">
+        <div class="container">
+            <div class="quote-section">
+                <div class="quote-grid">
+                    <div class="quote-box">
+                        <div class="eyebrow" style="background: rgba(255,255,255,.10); color: #f0d77a;">Orçamento rápido</div>
+                        <h3>Solicite atendimento comercial com rapidez</h3>
+                        <p>
+                            Fale diretamente pelo WhatsApp para solicitar orçamento, apresentar sua demanda ou alinhar serviços.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-accent">
+                                <i class="fa-brands fa-whatsapp"></i> Pedir orçamento
+                            </a>
+                            <a href="#contato" class="btn btn-outline">
+                                <i class="fa-solid fa-paper-plane"></i> Ir para contato
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="quote-card">
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i> Atendimento direto no WhatsApp</li>
+                            <li><i class="fa-solid fa-check"></i> Transporte de alimentos</li>
+                            <li><i class="fa-solid fa-check"></i> Serviços HR</li>
+                            <li><i class="fa-solid fa-check"></i> Referência a operações Mega100</li>
+                            <li><i class="fa-solid fa-check"></i> Comunicação profissional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">FAQ</div>
+                <h2 class="section-title">Perguntas frequentes</h2>
+                <p class="section-subtitle">
+                    Dúvidas comuns para deixar o site mais completo e profissional.
+                </p>
+            </div>
+
+            <div class="faq-wrap">
+                <div class="faq-item">
+                    <button class="faq-question">
+            Quais serviços a MVDL Transportes realiza?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="faq-answer">
+                        <p>A MVDL Transportes atua com transporte de alimentos, serviços HR, apoio operacional e outros serviços relacionados à operação.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+            Onde a empresa atua?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="faq-answer">
+                        <p>A empresa atua em São Paulo / Jandira, com foco em atendimento profissional e operação organizada.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+            Como solicitar orçamento?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="faq-answer">
+                        <p>Você pode solicitar orçamento diretamente pelo WhatsApp ou pelo formulário da área de contato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Contato</div>
+                <h2 class="section-title">Fale com a MVDL Transportes</h2>
+                <p class="section-subtitle">
+                    Atendimento direto para transporte de alimentos, serviços HR e apoio operacional.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Informações comerciais</h3>
+                    <p>Entre em contato para solicitar atendimento, apresentar sua necessidade ou iniciar uma conversa comercial.</p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Telefone</strong>
+                                <span>+55 11 96360-2617</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+55 11 96360-2617</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@storemvdl</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Localização</strong>
+                                <span>São Paulo / Jandira</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Solicitar contato</h3>
+                    <form class="form-grid" onsubmit="enviarWhats(event)">
+                        <input type="text" id="nome" placeholder="Seu nome" required>
+                        <input type="text" id="empresa" placeholder="Empresa">
+                        <input type="tel" id="telefone" placeholder="Seu telefone" required>
+                        <textarea id="mensagem" rows="5" placeholder="Descreva sua necessidade"></textarea>
+                        <button type="submit" class="btn btn-dark">
+              <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+            </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Uma presença digital mais forte para valorizar sua empresa</h2>
+                <p>
+                    A MVDL Transportes agora pode se apresentar com mais força, mais sofisticação e mais autoridade no digital.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#orcamento" class="btn btn-accent">
+                        <i class="fa-solid fa-file-signature"></i> Solicitar orçamento
+                    </a>
+                    <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-outline">
+                        <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="#inicio" class="logo">
+                        <div class="logo-mark"><i class="fa-solid fa-truck-fast"></i></div>
+                        MVDL <span>Transportes</span>
+                    </a>
+                    <p>
+                        Especializada em transporte de alimentos, serviços HR e apoio operacional, com atuação em São Paulo / Jandira.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/storemvdl?utm_source=qr" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Menu</h4>
+                    <div class="footer-links">
+                        <a href="#inicio">Início</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#orcamento">Orçamento</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <div class="footer-links">
+                        <a href="#servicos">Transporte de alimentos</a>
+                        <a href="#servicos">Serviços HR</a>
+                        <a href="#servicos">Apoio operacional</a>
+                        <a href="#servicos">Outros serviços</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fa-solid fa-phone"></i> +55 11 96360-2617</p>
+                    <p><i class="fa-brands fa-whatsapp"></i> +55 11 96360-2617</p>
+                    <p><i class="fa-brands fa-instagram"></i> @storemvdl</p>
+                    <p><i class="fa-solid fa-location-dot"></i> São Paulo / Jandira</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 MVDL Transportes. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511963602617" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+    </a>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navbar').classList.toggle('active');
+        }
+
+        function enviarWhats(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value || '';
+            const empresa = document.getElementById('empresa').value || '';
+            const telefone = document.getElementById('telefone').value || '';
+            const mensagem = document.getElementById('mensagem').value || '';
+
+            const texto =
+                `Olá, meu nome é ${nome}%0A` +
+                `Empresa: ${empresa}%0A` +
+                `Telefone: ${telefone}%0A` +
+                `Mensagem: ${mensagem}`;
+
+            window.open(`https://wa.me/5511963602617?text=${texto}`, '_blank');
+        }
+
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const btn = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            btn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                    faq.querySelector('.faq-answer').style.maxHeight = null;
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
