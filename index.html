@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVDL Transportes | Soluções em Transporte e Apoio Operacional</title>
-    <meta name="description" content="MVDL Transportes - Soluções em transporte, serviços HR e apoio operacional com atuação em São Paulo / Jandira." />
+    <title>MVDL Transportes | Transporte e Apoio Operacional com Atendimento Profissional</title>
+    <meta name="description" content="MVDL Transportes com atendimento profissional em transporte e apoio operacional para empresas em São Paulo, Jandira e região." />
+    <meta name="theme-color" content="#090909" />
+
+    <meta property="og:title" content="MVDL Transportes | Transporte e Apoio Operacional com Atendimento Profissional" />
+    <meta property="og:description" content="Soluções em transporte e apoio operacional com atendimento ágil, profissional e confiável para empresas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://transportesmvdl.github.io/Transportes-MVDL/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,22 +21,28 @@
 
     <style>
          :root {
-            --primary: #070707;
-            --primary-2: #161311;
-            --primary-3: #221b18;
-            --accent: #c46f2c;
-            --accent-2: #f0c9a2;
-            --accent-dark: #9e5420;
-            --white: #ffffff;
-            --light: #f8f5f2;
-            --light-2: #fcfaf8;
-            --text: #15110f;
+            --bg: #090909;
+            --bg-soft: #12100f;
+            --bg-card: #161311;
+            --surface: #ffffff;
+            --surface-2: #fbf7f3;
+            --surface-3: #f3eae2;
+            --text: #171210;
             --muted: #655a54;
-            --border: #ead9cc;
-            --shadow: 0 28px 70px rgba(0, 0, 0, .16);
-            --shadow-soft: 0 14px 34px rgba(0, 0, 0, .08);
+            --line: #ead9cc;
+            --gold: #c27435;
+            --gold-2: #efc59b;
+            --gold-3: #ffd7b5;
+            --gold-dark: #9b5a2c;
+            --green: #25D366;
+            --white: #ffffff;
+            --shadow-xl: 0 34px 90px rgba(0, 0, 0, .18);
+            --shadow-lg: 0 18px 44px rgba(0, 0, 0, .10);
+            --radius-xl: 34px;
+            --radius-lg: 24px;
+            --radius-md: 18px;
             --transition: all .3s ease;
-            --container: 1240px;
+            --container: 1280px;
         }
         
         * {
@@ -43,7 +57,7 @@
         }
         
         body {
-            background: var(--light);
+            background: #f8f5f2;
             color: var(--text);
             overflow-x: hidden;
         }
@@ -62,46 +76,48 @@
             width: 100%;
             max-width: var(--container);
             margin: 0 auto;
-            padding: 0 22px;
+            padding: 0 24px;
         }
         
         .section {
-            padding: 96px 0;
+            padding: 110px 0;
         }
         
         .section-header {
             text-align: center;
-            margin-bottom: 54px;
+            margin-bottom: 60px;
         }
         
         .eyebrow {
-            display: inline-block;
-            margin-bottom: 14px;
-            padding: 8px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 15px;
             border-radius: 999px;
-            background: rgba(196, 111, 44, .10);
-            color: var(--accent-dark);
+            background: rgba(194, 116, 53, .10);
+            color: var(--gold-dark);
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
+            margin-bottom: 16px;
         }
         
         .section-title {
-            font-size: clamp(32px, 4vw, 50px);
+            font-size: clamp(34px, 4vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -1.2px;
             font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.9px;
+            color: #0f0d0c;
             margin-bottom: 14px;
-            line-height: 1.10;
         }
         
         .section-subtitle {
-            max-width: 760px;
+            max-width: 820px;
             margin: 0 auto;
             color: var(--muted);
-            line-height: 1.9;
             font-size: 15px;
+            line-height: 1.95;
         }
         
         .btn {
@@ -109,49 +125,49 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 999px;
             padding: 15px 28px;
-            font-weight: 700;
+            border-radius: 999px;
             font-size: 14px;
+            font-weight: 700;
             transition: var(--transition);
+            cursor: pointer;
+            border: none;
         }
         
-        .btn-accent {
-            background: linear-gradient(135deg, #c46f2c, #d78645);
-            color: #ffffff;
-            box-shadow: 0 12px 28px rgba(196, 111, 44, .24);
+        .btn-gold {
+            background: linear-gradient(135deg, #c27435, #d78645);
+            color: #fff;
+            box-shadow: 0 12px 28px rgba(194, 116, 53, .24);
         }
         
-        .btn-accent:hover {
+        .btn-gold:hover {
             transform: translateY(-3px);
         }
         
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 1.5px solid rgba(255, 255, 255, .20);
-        }
-        
-        .btn-outline:hover {
-            border-color: var(--accent-2);
-            background: rgba(255, 255, 255, .06);
-        }
-        
         .btn-dark {
-            background: var(--accent);
-            color: var(--white);
+            background: #0f0d0c;
+            color: #fff;
         }
         
         .btn-dark:hover {
-            background: #d78645;
             transform: translateY(-2px);
+            background: #1a1614;
+        }
+        
+        .btn-outline-light {
+            background: transparent;
+            color: #fff;
+            border: 1.5px solid rgba(255, 255, 255, .18);
+        }
+        
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, .06);
+            border-color: var(--gold-2);
         }
         
         .topbar {
             background: #050403;
-            color: #f1dcc7;
+            color: #f2dfcb;
             font-size: 13px;
             padding: 11px 0;
             border-bottom: 1px solid rgba(255, 255, 255, .06);
@@ -160,43 +176,39 @@
         .topbar .container {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
+            gap: 16px 20px;
             flex-wrap: wrap;
         }
         
         .topbar-group {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            gap: 18px;
             flex-wrap: wrap;
         }
         
-        .topbar-group span,
-        .topbar-group a {
-            display: flex;
+        .topbar-group a,
+        .topbar-group span {
+            display: inline-flex;
             align-items: center;
             gap: 8px;
         }
         
-        .topbar-group a {
-            color: #f1dcc7;
-            transition: var(--transition);
-        }
-        
         .topbar-group a:hover {
-            color: #ffffff;
+            color: #fff;
         }
         
         header {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(7, 7, 7, .96);
+            background: rgba(9, 9, 9, .96);
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 24px rgba(0, 0, 0, .10);
         }
         
         .navbar {
-            min-height: 84px;
+            min-height: 88px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -206,39 +218,40 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 24px;
+            gap: 13px;
+            font-size: 25px;
             font-weight: 800;
-            color: var(--white);
+            color: #fff;
         }
         
         .logo-mark {
-            width: 54px;
-            height: 54px;
-            border-radius: 15px;
+            width: 58px;
+            height: 58px;
+            border-radius: 18px;
             display: grid;
             place-items: center;
-            background: linear-gradient(135deg, #c46f2c, #d78645);
-            color: #ffffff;
-            box-shadow: 0 10px 24px rgba(196, 111, 44, .22);
+            background: linear-gradient(135deg, #c27435, #d78645);
+            color: #fff;
+            box-shadow: 0 12px 28px rgba(194, 116, 53, .24);
         }
         
         .logo span {
-            color: var(--accent-2);
+            color: var(--gold-2);
         }
         
         nav ul {
             list-style: none;
             display: flex;
             align-items: center;
-            gap: 22px;
+            gap: 18px;
         }
         
         nav a {
             color: #f8efe8;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: .4px;
             position: relative;
         }
         
@@ -249,86 +262,88 @@
             bottom: -7px;
             width: 0;
             height: 2px;
-            background: var(--accent-2);
+            background: var(--gold-2);
             transition: var(--transition);
         }
         
-        nav a:hover::after {
+        nav a:hover::after,
+        nav a.active::after {
             width: 100%;
         }
         
         .menu-toggle {
             display: none;
-            color: var(--white);
+            color: #fff;
             font-size: 24px;
             cursor: pointer;
         }
         
         .hero {
-            min-height: 96vh;
+            min-height: 100vh;
+            position: relative;
             display: flex;
             align-items: center;
-            background: linear-gradient(102deg, rgba(7, 7, 7, .97) 0%, rgba(7, 7, 7, .90) 44%, rgba(7, 7, 7, .58) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            position: relative;
+            background: linear-gradient(105deg, rgba(8, 8, 8, .98) 0%, rgba(8, 8, 8, .92) 45%, rgba(8, 8, 8, .62) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            overflow: hidden;
         }
         
         .hero::before {
             content: "";
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at top right, rgba(196, 111, 44, .20), transparent 30%), linear-gradient(to top, rgba(0, 0, 0, .30), transparent);
+            background: radial-gradient(circle at top right, rgba(194, 116, 53, .22), transparent 28%), radial-gradient(circle at bottom left, rgba(194, 116, 53, .10), transparent 22%);
         }
         
         .hero-grid {
             position: relative;
             z-index: 2;
             display: grid;
-            grid-template-columns: 1.18fr .82fr;
-            gap: 46px;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 52px;
             align-items: center;
-            padding: 96px 0 78px;
-        }
-        
-        .hero-title {
-            font-size: clamp(42px, 5vw, 76px);
-            line-height: 1.01;
-            letter-spacing: -1.6px;
-            color: var(--white);
-            font-weight: 900;
-            margin-bottom: 22px;
-            max-width: 800px;
-        }
-        
-        .hero-title span {
-            color: var(--accent-2);
-        }
-        
-        .hero-text p {
-            max-width: 690px;
-            color: #f0dfd0;
-            line-height: 1.95;
-            font-size: 16px;
-            margin-bottom: 32px;
+            padding: 104px 0 88px;
         }
         
         .hero-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
-            margin-bottom: 28px;
+            margin-bottom: 26px;
         }
         
         .hero-badge {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 10px;
-            padding: 11px 15px;
+            gap: 9px;
+            padding: 11px 16px;
             border-radius: 999px;
             background: rgba(255, 255, 255, .08);
             border: 1px solid rgba(255, 255, 255, .10);
-            color: var(--white);
+            color: #fff;
             font-size: 13px;
             font-weight: 700;
+        }
+        
+        .hero-title {
+            font-size: clamp(44px, 5vw, 82px);
+            line-height: .99;
+            letter-spacing: -2px;
+            color: #fff;
+            font-weight: 900;
+            margin-bottom: 22px;
+            max-width: 860px;
+        }
+        
+        .hero-title span {
+            color: var(--gold-2);
+        }
+        
+        .hero-text p {
+            max-width: 700px;
+            color: #f1dfd0;
+            line-height: 1.95;
+            font-size: 16px;
+            margin-bottom: 32px;
         }
         
         .hero-buttons {
@@ -338,20 +353,26 @@
         }
         
         .hero-panel,
+        .metric-card,
         .service-card,
-        .why-card,
-        .number-card,
+        .value-card,
+        .step-card,
+        .partner-card,
+        .proof-card,
+        .testimonial-card,
+        .region-card,
+        .institution-card,
         .contact-card,
         .contact-form,
         .faq-item {
-            border: 1px solid rgba(196, 111, 44, .14);
+            border: 1px solid rgba(194, 116, 53, .14);
         }
         
         .hero-panel {
-            background: rgba(255, 255, 255, .98);
-            border-radius: 24px;
-            padding: 34px;
-            box-shadow: var(--shadow);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .99), rgba(252, 250, 248, .98));
+            border-radius: var(--radius-xl);
+            padding: 36px;
+            box-shadow: var(--shadow-xl);
             position: relative;
             overflow: hidden;
         }
@@ -359,106 +380,130 @@
         .hero-panel::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
+            inset: 0 auto auto 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, #c46f2c, #f0c9a2);
+            background: linear-gradient(90deg, #c27435, #efc59b);
         }
         
         .hero-panel h3 {
-            color: var(--primary);
-            font-size: 25px;
-            font-weight: 800;
+            font-size: 27px;
+            color: #0f0d0c;
+            line-height: 1.2;
             margin-bottom: 12px;
-            line-height: 1.25;
+            font-weight: 800;
         }
         
         .hero-panel p {
             color: var(--muted);
-            line-height: 1.85;
-            margin-bottom: 18px;
+            line-height: 1.9;
             font-size: 14px;
+            margin-bottom: 18px;
         }
         
-        .panel-list {
+        .hero-list {
+            list-style: none;
             display: grid;
             gap: 12px;
+            margin-bottom: 22px;
         }
         
-        .panel-list div {
+        .hero-list li {
             display: flex;
             gap: 12px;
             align-items: flex-start;
             color: var(--text);
-            line-height: 1.7;
+            line-height: 1.75;
             font-size: 14px;
         }
         
-        .panel-list i,
-        .check-list i,
-        .quote-card i {
-            color: var(--accent-dark);
+        .hero-list i {
+            color: var(--gold-dark);
             margin-top: 3px;
         }
         
-        .trust-bar {
-            margin-top: -42px;
+        .hero-highlight {
+            padding: 18px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(194, 116, 53, .08), rgba(239, 197, 155, .18));
+            border: 1px solid rgba(194, 116, 53, .16);
+        }
+        
+        .hero-highlight strong {
+            display: block;
+            color: #0f0d0c;
+            margin-bottom: 6px;
+            font-size: 15px;
+        }
+        
+        .hero-highlight span {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+        
+        .metrics-wrap {
+            margin-top: -48px;
             position: relative;
             z-index: 5;
         }
         
-        .trust-grid {
-            background: var(--white);
-            border-radius: 24px;
+        .metrics-grid {
+            background: #fff;
+            border-radius: 26px;
             padding: 22px;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-xl);
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
+            gap: 18px;
         }
         
-        .trust-item {
+        .metric-card {
+            background: linear-gradient(180deg, #fff, #fcfaf8);
+            border-radius: 22px;
+            padding: 28px 18px;
             text-align: center;
-            padding: 18px 14px;
+            box-shadow: var(--shadow-lg);
         }
         
-        .trust-item h3 {
-            font-size: 30px;
-            color: var(--primary);
+        .metric-card h3 {
+            font-size: 38px;
+            color: #0f0d0c;
             font-weight: 800;
             margin-bottom: 8px;
         }
         
-        .trust-item p {
+        .metric-card p {
             color: var(--muted);
             font-size: 14px;
+            line-height: 1.7;
             font-weight: 600;
-            line-height: 1.6;
         }
         
         .about-grid,
+        .institution-grid,
         .contact-grid,
         .quote-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 44px;
+            gap: 48px;
             align-items: center;
         }
         
         .about-image img {
             width: 100%;
-            min-height: 540px;
+            min-height: 620px;
             object-fit: cover;
-            border-radius: 24px;
-            box-shadow: var(--shadow);
+            border-radius: 28px;
+            box-shadow: var(--shadow-xl);
         }
         
-        .about-content p {
+        .about-content p,
+        .institution-card p {
             color: var(--muted);
             line-height: 1.95;
-            margin-bottom: 16px;
             font-size: 15px;
+            margin-bottom: 16px;
         }
         
         .check-list {
@@ -472,37 +517,50 @@
             display: flex;
             gap: 12px;
             align-items: flex-start;
-            line-height: 1.7;
+            line-height: 1.78;
             font-size: 15px;
+        }
+        
+        .check-list i {
+            color: var(--gold-dark);
+            margin-top: 3px;
         }
         
         .highlight-band {
             margin-top: 24px;
-            padding: 20px 22px;
+            padding: 22px;
             border-radius: 18px;
-            background: linear-gradient(135deg, rgba(7, 7, 7, .03), rgba(196, 111, 44, .10));
-            border: 1px solid rgba(196, 111, 44, .18);
+            background: linear-gradient(135deg, rgba(9, 9, 9, .03), rgba(194, 116, 53, .10));
+            border: 1px solid rgba(194, 116, 53, .16);
         }
         
         .highlight-band strong {
             display: block;
             margin-bottom: 6px;
-            color: var(--primary);
+            color: #0f0d0c;
             font-size: 15px;
         }
         
         .highlight-band span {
             color: var(--muted);
-            line-height: 1.7;
+            line-height: 1.72;
             font-size: 14px;
         }
         
-        .services {
-            background: var(--light-2);
+        .services,
+        .partners,
+        .testimonials,
+        .faq-section {
+            background: var(--surface-2);
         }
         
         .services-grid,
-        .why-grid {
+        .values-grid,
+        .steps-grid,
+        .proof-grid,
+        .partners-grid,
+        .testimonials-grid,
+        .regions-grid {
             display: grid;
             gap: 22px;
         }
@@ -511,78 +569,164 @@
             grid-template-columns: repeat(4, 1fr);
         }
         
-        .why-grid {
+        .values-grid,
+        .steps-grid,
+        .proof-grid,
+        .testimonials-grid,
+        .regions-grid {
             grid-template-columns: repeat(3, 1fr);
         }
         
+        .partners-grid {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        
         .service-card,
-        .why-card {
-            background: linear-gradient(180deg, #ffffff, #fcfaf8);
-            border-radius: 22px;
-            padding: 30px 24px;
-            box-shadow: var(--shadow-soft);
+        .value-card,
+        .step-card,
+        .proof-card,
+        .partner-card,
+        .testimonial-card,
+        .region-card,
+        .institution-card {
+            background: linear-gradient(180deg, #fff, #fcfaf8);
+            border-radius: 24px;
+            padding: 32px 24px;
+            box-shadow: var(--shadow-lg);
             transition: var(--transition);
         }
         
         .service-card:hover,
-        .why-card:hover {
-            transform: translateY(-6px);
+        .value-card:hover,
+        .step-card:hover,
+        .proof-card:hover,
+        .partner-card:hover,
+        .testimonial-card:hover,
+        .region-card:hover,
+        .institution-card:hover {
+            transform: translateY(-7px);
         }
         
         .service-icon,
-        .why-icon {
-            width: 58px;
-            height: 58px;
+        .value-icon,
+        .proof-icon,
+        .region-icon {
+            width: 60px;
+            height: 60px;
             display: grid;
             place-items: center;
-            border-radius: 16px;
+            border-radius: 18px;
             font-size: 22px;
             margin-bottom: 18px;
-            background: rgba(196, 111, 44, .10);
-            color: #c46f2c;
+            background: rgba(194, 116, 53, .10);
+            color: var(--gold);
+        }
+        
+        .step-number {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #c27435, #d78645);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 22px rgba(194, 116, 53, .20);
         }
         
         .service-card h4,
-        .why-card h4 {
+        .value-card h4,
+        .step-card h4,
+        .proof-card h4,
+        .testimonial-card h4,
+        .region-card h4,
+        .institution-card h4 {
             font-size: 18px;
-            color: var(--primary);
+            color: #0f0d0c;
             margin-bottom: 12px;
             font-weight: 800;
             line-height: 1.3;
         }
         
         .service-card p,
-        .why-card p {
+        .value-card p,
+        .step-card p,
+        .proof-card p,
+        .testimonial-card p,
+        .region-card p {
             color: var(--muted);
             font-size: 14px;
-            line-height: 1.85;
+            line-height: 1.9;
+        }
+        
+        .partner-card {
+            min-height: 140px;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f0d0c;
+            letter-spacing: .5px;
+        }
+        
+        .partner-card span {
+            display: block;
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--muted);
+            font-weight: 600;
+            letter-spacing: 0;
+        }
+        
+        .institution-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+            margin-top: 14px;
+        }
+        
+        .institution-list li {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            line-height: 1.75;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        
+        .institution-list i {
+            color: var(--gold-dark);
+            margin-top: 3px;
         }
         
         .quote-section {
-            background: linear-gradient(135deg, var(--primary), var(--primary-2));
-            border-radius: 28px;
-            padding: 54px 34px;
-            color: var(--white);
-            box-shadow: var(--shadow);
+            background: linear-gradient(135deg, #0b0b0b, #17120f);
+            border-radius: 30px;
+            padding: 58px 36px;
+            color: #fff;
+            box-shadow: var(--shadow-xl);
         }
         
         .quote-box h3 {
-            font-size: clamp(30px, 4vw, 46px);
+            font-size: clamp(32px, 4vw, 48px);
+            line-height: 1.12;
             font-weight: 800;
             margin-bottom: 14px;
-            line-height: 1.15;
         }
         
         .quote-box p {
             color: #f0dfd0;
-            line-height: 1.95;
             font-size: 15px;
+            line-height: 1.95;
         }
         
         .quote-card {
             background: rgba(255, 255, 255, .08);
             border: 1px solid rgba(255, 255, 255, .10);
-            border-radius: 22px;
+            border-radius: 24px;
             padding: 24px;
         }
         
@@ -597,22 +741,51 @@
             gap: 10px;
             align-items: flex-start;
             color: #fff4ea;
-            line-height: 1.75;
+            line-height: 1.78;
             font-size: 14px;
         }
         
+        .quote-card i {
+            color: var(--gold-2);
+            margin-top: 3px;
+        }
+        
+        .testimonial-card .stars {
+            color: #f3b53f;
+            letter-spacing: 2px;
+            margin-bottom: 14px;
+        }
+        
+        .testimonial-author {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(194, 116, 53, .16);
+        }
+        
+        .testimonial-author strong {
+            display: block;
+            color: #0f0d0c;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-author span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+        
         .faq-wrap {
-            max-width: 900px;
+            max-width: 940px;
             margin: 0 auto;
             display: grid;
             gap: 16px;
         }
         
         .faq-item {
-            background: var(--white);
-            border-radius: 18px;
+            background: #fff;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: var(--shadow-soft);
+            box-shadow: var(--shadow-lg);
         }
         
         .faq-question {
@@ -627,8 +800,16 @@
             gap: 20px;
             font-size: 15px;
             font-weight: 800;
+            color: #0f0d0c;
             cursor: pointer;
-            color: var(--primary);
+        }
+        
+        .faq-question i {
+            transition: transform .3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
         }
         
         .faq-answer {
@@ -646,16 +827,16 @@
         
         .contact-card,
         .contact-form {
-            background: var(--white);
-            border-radius: 24px;
-            padding: 32px;
-            box-shadow: var(--shadow-soft);
+            background: #fff;
+            border-radius: 26px;
+            padding: 34px;
+            box-shadow: var(--shadow-lg);
         }
         
         .contact-card h3,
         .contact-form h3 {
-            font-size: 23px;
-            color: var(--primary);
+            font-size: 24px;
+            color: #0f0d0c;
             font-weight: 800;
             margin-bottom: 18px;
         }
@@ -676,7 +857,6 @@
             display: flex;
             gap: 14px;
             align-items: flex-start;
-            text-decoration: none;
         }
         
         .contact-item i {
@@ -685,13 +865,13 @@
             border-radius: 14px;
             display: grid;
             place-items: center;
-            background: rgba(196, 111, 44, .10);
-            color: var(--accent-dark);
+            background: rgba(194, 116, 53, .10);
+            color: var(--gold-dark);
         }
         
         .contact-item strong {
             display: block;
-            color: var(--primary);
+            color: #0f0d0c;
             margin-bottom: 4px;
             font-size: 15px;
         }
@@ -702,56 +882,67 @@
             font-size: 14px;
         }
         
-        .contact-item:hover strong,
-        .contact-item:hover span {
-            color: var(--accent-dark);
-        }
-        
         .form-grid {
             display: grid;
             gap: 14px;
         }
         
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        
         .form-grid input,
+        .form-grid select,
         .form-grid textarea {
             width: 100%;
             padding: 15px 16px;
-            border: 1.5px solid var(--border);
+            border: 1.5px solid #ead9cc;
             border-radius: 14px;
             outline: none;
             font-size: 14px;
+            background: #fff;
             resize: none;
             transition: var(--transition);
         }
         
         .form-grid input:focus,
+        .form-grid select:focus,
         .form-grid textarea:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px rgba(196, 111, 44, .12);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(194, 116, 53, .12);
+        }
+        
+        .form-note {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.7;
         }
         
         .cta-box {
-            border-radius: 28px;
-            padding: 78px 28px;
+            border-radius: 32px;
+            padding: 88px 30px;
             text-align: center;
+            color: #fff;
             background: linear-gradient(100deg, rgba(7, 7, 7, .95), rgba(22, 19, 17, .90)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80') center/cover;
-            color: var(--white);
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-xl);
         }
         
         .cta-box h2 {
-            font-size: clamp(32px, 4vw, 50px);
+            font-size: clamp(34px, 4vw, 56px);
             font-weight: 800;
-            margin-bottom: 16px;
-            line-height: 1.12;
+            line-height: 1.1;
+            max-width: 960px;
+            margin: 0 auto 16px;
         }
         
         .cta-box p {
-            max-width: 760px;
+            max-width: 800px;
             margin: 0 auto 28px;
             color: #f0dfd0;
-            line-height: 1.95;
             font-size: 15px;
+            line-height: 1.95;
         }
         
         .cta-buttons {
@@ -763,17 +954,17 @@
         
         footer {
             background: linear-gradient(180deg, #050403, #120d0a);
-            color: var(--white);
-            margin-top: 88px;
+            color: #fff;
+            margin-top: 94px;
         }
         
         .footer-top {
-            padding: 72px 0 34px;
+            padding: 78px 0 34px;
         }
         
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr 1fr;
+            grid-template-columns: 1.3fr 1fr 1fr 1fr;
             gap: 28px;
         }
         
@@ -790,10 +981,10 @@
         }
         
         .footer-col h4 {
+            color: #fff;
             font-size: 17px;
             font-weight: 800;
             margin-bottom: 18px;
-            color: var(--white);
         }
         
         .footer-links {
@@ -803,7 +994,7 @@
         
         .footer-links a:hover,
         .footer-col p a:hover {
-            color: var(--accent-2);
+            color: var(--gold-2);
         }
         
         .social-links {
@@ -823,8 +1014,8 @@
         }
         
         .social-links a:hover {
-            background: var(--accent);
-            color: #ffffff;
+            background: var(--gold);
+            color: #fff;
             transform: translateY(-3px);
         }
         
@@ -840,7 +1031,7 @@
             position: fixed;
             right: 20px;
             bottom: 20px;
-            background: #25D366;
+            background: var(--green);
             color: #fff;
             border-radius: 999px;
             padding: 14px 18px;
@@ -853,17 +1044,23 @@
             font-size: 14px;
         }
         
-        @media (max-width: 1100px) {
+        @media (max-width: 1180px) {
             .hero-grid,
             .about-grid,
+            .institution-grid,
             .contact-grid,
             .quote-grid {
                 grid-template-columns: 1fr;
             }
+            .metrics-grid,
             .services-grid,
-            .footer-grid,
-            .why-grid,
-            .trust-grid {
+            .values-grid,
+            .steps-grid,
+            .proof-grid,
+            .testimonials-grid,
+            .regions-grid,
+            .partners-grid,
+            .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -874,16 +1071,16 @@
             }
             nav {
                 position: absolute;
-                top: 84px;
+                top: 88px;
                 left: 0;
                 width: 100%;
-                background: var(--primary);
+                background: #090909;
                 max-height: 0;
                 overflow: hidden;
                 transition: .3s ease;
             }
             nav.active {
-                max-height: 480px;
+                max-height: 780px;
             }
             nav ul {
                 flex-direction: column;
@@ -900,32 +1097,36 @@
                 padding: 14px 20px;
                 border-bottom: 1px solid rgba(255, 255, 255, .06);
             }
+            .metrics-grid,
             .services-grid,
+            .values-grid,
+            .steps-grid,
+            .proof-grid,
+            .testimonials-grid,
+            .regions-grid,
+            .partners-grid,
             .footer-grid,
-            .why-grid,
-            .trust-grid {
+            .form-row {
                 grid-template-columns: 1fr;
             }
             .hero-title {
-                font-size: clamp(34px, 9vw, 52px);
+                font-size: clamp(36px, 10vw, 54px);
             }
         }
         
         @media (max-width: 580px) {
             .section {
-                padding: 74px 0;
+                padding: 80px 0;
             }
             .hero-panel,
             .contact-card,
-            .contact-form {
-                padding: 22px;
+            .contact-form,
+            .institution-card {
+                padding: 24px;
             }
-            .cta-box,
-            .quote-section {
-                padding: 50px 20px;
-            }
-            .whatsapp-float span {
-                display: none;
+            .quote-section,
+            .cta-box {
+                padding: 54px 20px;
             }
             .btn {
                 width: 100%;
@@ -933,6 +1134,9 @@
             .hero-buttons,
             .cta-buttons {
                 flex-direction: column;
+            }
+            .whatsapp-float span {
+                display: none;
             }
         }
     </style>
@@ -943,18 +1147,12 @@
     <div class="topbar">
         <div class="container">
             <div class="topbar-group">
-                <a href="tel:+5511963602617">
-                    <i class="fa-solid fa-phone-volume"></i> +55 11 96360-2617
-                </a>
-                <a href="https://wa.me/5511963602617" target="_blank">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp comercial
-                </a>
+                <a href="tel:+5511963602617"><i class="fa-solid fa-phone-volume"></i> +55 11 96360-2617</a>
+                <a href="mailto:contato@transportesmvdl@gmail.com"><i class="fa-solid fa-envelope"></i> contato@transportesmvdl@gmail.com</a>
             </div>
             <div class="topbar-group">
                 <span><i class="fa-solid fa-location-dot"></i> São Paulo / Jandira</span>
-                <a href="https://www.instagram.com/storemvdl/" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> @storemvdl
-                </a>
+                <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Orçamento pelo WhatsApp</a>
             </div>
         </div>
     </div>
@@ -971,9 +1169,13 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#valores">Diferenciais</a></li>
+                    <li><a href="#como-funciona">Processo</a></li>
+                    <li><a href="#parceiros">Parceiros</a></li>
+                    <li><a href="#credibilidade">Credibilidade</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#regioes">Regiões</a></li>
                     <li><a href="#orcamento">Orçamento</a></li>
-                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -988,63 +1190,68 @@
         <div class="container hero-grid">
             <div class="hero-text">
                 <div class="hero-badges">
-                    <div class="hero-badge"><i class="fa-solid fa-truck"></i> Transporte e logística</div>
-                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Segurança operacional</div>
-                    <div class="hero-badge"><i class="fa-solid fa-handshake"></i> Prestadora Mega100</div>
+                    <div class="hero-badge"><i class="fa-solid fa-truck"></i> Transporte com agilidade</div>
+                    <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> Atendimento com confiança</div>
+                    <div class="hero-badge"><i class="fa-solid fa-headset"></i> Resposta comercial rápida</div>
                 </div>
 
                 <h1 class="hero-title">
-                    Soluções em transporte com <span>agilidade, confiança e alto padrão</span>
+                    Transporte e apoio operacional com uma apresentação <span>profissional, confiável e bem posicionada</span>
                 </h1>
 
                 <p>
-                    A MVDL Transportes oferece soluções em transporte, serviços HR e apoio operacional com atendimento profissional, organização e compromisso com a eficiência da sua operação.
+                    A MVDL Transportes se apresenta no digital de forma clara e profissional, transmitindo mais confiança, valorizando seus serviços e facilitando o contato comercial com empresas que buscam agilidade e organização.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#orcamento" class="btn btn-accent">
+                    <a href="#orcamento" class="btn btn-gold">
                         <i class="fa-solid fa-file-signature"></i> Solicitar orçamento
                     </a>
-                    <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-outline">
+                    <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
                         <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
                     </a>
                 </div>
             </div>
 
             <div class="hero-panel">
-                <h3>Operação pronta para atender com alto padrão profissional</h3>
+                <h3>Mais confiança logo no primeiro contato</h3>
                 <p>
-                    Mais do que executar serviços, entregamos confiança, pontualidade e suporte operacional com responsabilidade, organização e atenção a cada detalhe da sua demanda.
+                    Esta estrutura foi pensada para apresentar a empresa de forma mais sólida, organizada e profissional, fortalecendo a imagem da marca e facilitando novas oportunidades comerciais.
                 </p>
 
-                <div class="panel-list">
-                    <div><i class="fa-solid fa-check"></i><span>Atendimento comercial rápido e objetivo</span></div>
-                    <div><i class="fa-solid fa-check"></i><span>Compromisso com organização e segurança operacional</span></div>
-                    <div><i class="fa-solid fa-check"></i><span>Suporte às operações da Mega100</span></div>
-                    <div><i class="fa-solid fa-check"></i><span>Contato direto via WhatsApp e Instagram</span></div>
+                <ul class="hero-list">
+                    <li><i class="fa-solid fa-check"></i><span>Apresentação institucional mais profissional</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Comunicação visual mais organizada e confiável</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Mais clareza para mostrar serviços e diferenciais</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Contato direto por WhatsApp, telefone e e-mail</span></li>
+                </ul>
+
+                <div class="hero-highlight">
+                    <strong>Uma apresentação mais profissional gera mais confiança</strong>
+                    <span>Quando a comunicação é clara e bem organizada, o cliente entende melhor o serviço, sente mais segurança e percebe mais valor no atendimento.</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="trust-bar">
+    <section class="metrics-wrap">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>+120</h3>
+                    <p>atendimentos e demandas operacionais realizadas</p>
+                </div>
+                <div class="metric-card">
+                    <h3>03</h3>
+                    <p>anos de atuação com foco em suporte profissional</p>
+                </div>
+                <div class="metric-card">
                     <h3>SP</h3>
-                    <p>Atuação em São Paulo / Jandira</p>
+                    <p>atendimento em São Paulo, Jandira e região</p>
                 </div>
-                <div class="trust-item">
-                    <h3>HR</h3>
-                    <p>Serviços e operações HR</p>
-                </div>
-                <div class="trust-item">
-                    <h3>M100</h3>
-                    <p>Prestadora de serviços da Mega100</p>
-                </div>
-                <div class="trust-item">
-                    <h3>100%</h3>
-                    <p>Compromisso com atendimento profissional</p>
+                <div class="metric-card">
+                    <h3>Mais</h3>
+                    <p>confiança e credibilidade na forma de apresentar a empresa</p>
                 </div>
             </div>
         </div>
@@ -1053,29 +1260,29 @@
     <section class="section" id="sobre">
         <div class="container about-grid">
             <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80" alt="MVDL Transportes">
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&q=80" alt="Operação logística e transporte" />
             </div>
 
             <div class="about-content">
-                <div class="eyebrow">Sobre a empresa</div>
-                <h2 class="section-title">Estrutura operacional preparada para atender com segurança e confiança</h2>
+                <div class="eyebrow"><i class="fa-solid fa-building"></i> Sobre a empresa</div>
+                <h2 class="section-title">Uma apresentação que transmite organização, confiança e profissionalismo</h2>
                 <p>
-                    A <strong>MVDL Transportes</strong> atua com seriedade no setor de transporte e apoio operacional, oferecendo soluções com foco em organização, pontualidade e responsabilidade em cada serviço prestado.
+                    A <strong>MVDL Transportes</strong> atua com soluções em transporte e apoio operacional para empresas que valorizam agilidade, clareza no atendimento e uma relação comercial mais objetiva.
                 </p>
                 <p>
-                    Como <strong>prestadora de serviços da Mega100</strong>, a empresa reforça sua credibilidade por meio de uma atuação profissional, atendimento objetivo e compromisso com a eficiência operacional.
+                    Este projeto foi construído para fortalecer a imagem da empresa, valorizar seus serviços e transmitir uma presença digital mais coerente com a qualidade do atendimento oferecido.
                 </p>
 
                 <ul class="check-list">
-                    <li><i class="fa-solid fa-check"></i> Transporte e logística com foco em eficiência</li>
-                    <li><i class="fa-solid fa-check"></i> Serviços HR com suporte profissional</li>
-                    <li><i class="fa-solid fa-check"></i> Apoio operacional com organização e agilidade</li>
-                    <li><i class="fa-solid fa-check"></i> Atendimento responsável, claro e pontual</li>
+                    <li><i class="fa-solid fa-check"></i> Comunicação mais clara e profissional</li>
+                    <li><i class="fa-solid fa-check"></i> Visual mais elegante e bem organizado</li>
+                    <li><i class="fa-solid fa-check"></i> Mais confiança no primeiro contato</li>
+                    <li><i class="fa-solid fa-check"></i> Melhor percepção de valor da empresa</li>
                 </ul>
 
                 <div class="highlight-band">
-                    <strong>Destaque estratégico</strong>
-                    <span>Uma empresa preparada para transmitir confiança, profissionalismo e alto padrão de atendimento em cada operação.</span>
+                    <strong>Uma boa apresentação fortalece a imagem da empresa</strong>
+                    <span>No digital, uma comunicação bem feita ajuda a transmitir confiança, credibilidade e mais segurança para quem está conhecendo o serviço.</span>
                 </div>
             </div>
         </div>
@@ -1084,10 +1291,10 @@
     <section class="section services" id="servicos">
         <div class="container">
             <div class="section-header">
-                <div class="eyebrow">Serviços</div>
-                <h2 class="section-title">Soluções da MVDL Transportes</h2>
+                <div class="eyebrow"><i class="fa-solid fa-briefcase"></i> Serviços</div>
+                <h2 class="section-title">Serviços apresentados com mais clareza, confiança e força comercial</h2>
                 <p class="section-subtitle">
-                    Serviços desenvolvidos para apoiar operações com mais eficiência, responsabilidade e alinhamento às necessidades do cliente.
+                    Uma boa apresentação ajuda o cliente a entender melhor o que a empresa faz, fortalece a imagem da marca e facilita o início do contato.
                 </p>
             </div>
 
@@ -1095,57 +1302,251 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-truck"></i></div>
                     <h4>Transporte Operacional</h4>
-                    <p>Serviços realizados com foco em prazo, organização operacional e atendimento responsável.</p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
-                    <h4>Serviços HR</h4>
-                    <p>Atuação em operações HR com mais controle, profissionalismo e suporte eficiente.</p>
+                    <p>Serviços apresentados com mais clareza para transmitir agilidade, responsabilidade e confiança em cada operação.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
                     <h4>Apoio Logístico</h4>
-                    <p>Suporte às demandas operacionais com foco em agilidade, organização e melhor execução.</p>
+                    <p>Uma forma mais objetiva de mostrar organização, eficiência e suporte para empresas que dependem de uma operação bem alinhada.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h4>Apoio Operacional</h4>
+                    <p>Atendimento com foco em presença profissional, confiança e suporte para demandas que exigem mais estrutura e comprometimento.</p>
                 </div>
 
                 <div class="service-card">
                     <div class="service-icon"><i class="fa-solid fa-headset"></i></div>
                     <h4>Atendimento Comercial</h4>
-                    <p>Contato rápido, comunicação direta e orçamento alinhado à realidade da sua operação.</p>
+                    <p>Contato rápido e bem organizado para facilitar orçamentos, esclarecer dúvidas e iniciar o atendimento com mais eficiência.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="diferenciais">
+    <section class="section" id="valores">
         <div class="container">
             <div class="section-header">
-                <div class="eyebrow">Diferenciais</div>
-                <h2 class="section-title">Por que escolher a MVDL Transportes?</h2>
+                <div class="eyebrow"><i class="fa-solid fa-crown"></i> Detalhes que valorizam o projeto</div>
+                <h2 class="section-title">O que faz este projeto transmitir mais valor</h2>
                 <p class="section-subtitle">
-                    Uma operação comprometida com organização, comunicação clara e responsabilidade em cada serviço prestado.
+                    Um site bem construído fortalece a imagem da empresa, aumenta a credibilidade e contribui diretamente para uma percepção de valor mais alta.
                 </p>
             </div>
 
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h4>Segurança e responsabilidade</h4>
-                    <p>Atuação com foco em controle operacional, atenção aos detalhes e compromisso com cada etapa do serviço.</p>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-medal"></i></div>
+                    <h4>Imagem institucional mais forte</h4>
+                    <p>Layout, organização e hierarquia visual pensados para fazer a empresa parecer mais sólida, confiável e bem posicionada.</p>
                 </div>
 
-                <div class="why-card">
-                    <div class="why-icon"><i class="fa-solid fa-stopwatch"></i></div>
-                    <h4>Pontualidade no atendimento</h4>
-                    <p>Mais agilidade na comunicação, no alinhamento comercial e na resposta às demandas do cliente.</p>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h4>Comunicação mais natural</h4>
+                    <p>Textos mais claros e humanos, feitos para valorizar os serviços e transmitir profissionalismo sem parecer algo genérico.</p>
                 </div>
 
-                <div class="why-card">
-                    <div class="why-icon"><i class="fa-solid fa-briefcase"></i></div>
-                    <h4>Postura profissional</h4>
-                    <p>Atendimento sério, presença corporativa e suporte alinhado às exigências do mercado.</p>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Mais apoio ao comercial</h4>
+                    <p>Estrutura criada para facilitar o orçamento, melhorar o contato e ajudar a empresa a gerar mais oportunidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-gears"></i> Processo</div>
+                <h2 class="section-title">Um caminho mais simples entre conhecer a empresa e entrar em contato</h2>
+                <p class="section-subtitle">
+                    O site foi pensado para facilitar a navegação, explicar melhor os serviços e tornar o contato mais rápido e natural.
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h4>Boa primeira impressão</h4>
+                    <p>O visitante encontra uma empresa com aparência profissional, comunicação clara e uma presença que transmite mais confiança.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h4>Entendimento mais rápido</h4>
+                    <p>A estrutura do site ajuda o cliente a entender melhor os serviços, os diferenciais e a forma de atendimento da empresa.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h4>Contato mais fácil</h4>
+                    <p>Com botões, formulário e canais bem visíveis, o processo de pedir orçamento fica mais simples e direto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section partners" id="parceiros">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-handshake"></i> Parceiros e clientes</div>
+                <h2 class="section-title">Parcerias que reforçam a confiança no nosso trabalho</h2>
+                <p class="section-subtitle">
+                    A presença da MEGA100 nesta trajetória representa uma relação construída com compromisso, seriedade e confiança no dia a dia.
+                </p>
+            </div>
+
+            <div class="partners-grid" style="grid-template-columns: 1fr; max-width: 340px; margin: 0 auto;">
+                <div class="partner-card">MEGA100 <span>Parceiro / Cliente</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="credibilidade">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-shield-halved"></i> Credibilidade</div>
+                <h2 class="section-title">O que ajuda a transmitir mais segurança e profissionalismo</h2>
+                <p class="section-subtitle">
+                    Uma boa presença digital passa mais confiança quando une apresentação clara, prova social e facilidade de contato.
+                </p>
+            </div>
+
+            <div class="proof-grid">
+                <div class="proof-card">
+                    <div class="proof-icon"><i class="fa-solid fa-building"></i></div>
+                    <h4>Apresentação institucional</h4>
+                    <p>Informações claras, organização visual e uma comunicação bem construída ajudam a empresa a parecer mais séria e preparada.</p>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-icon"><i class="fa-solid fa-users"></i></div>
+                    <h4>Confiança social</h4>
+                    <p>Clientes, parceiros, números e depoimentos reais reforçam a credibilidade e deixam a empresa mais forte aos olhos de quem visita.</p>
+                </div>
+
+                <div class="proof-card">
+                    <div class="proof-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h4>Contato mais eficiente</h4>
+                    <p>Com canais bem visíveis e um formulário simples, o site ajuda o comercial e facilita o início da conversa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="institucional">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-id-card"></i> Estrutura institucional</div>
+                <h2 class="section-title">Informações que reforçam organização e segurança para o cliente</h2>
+                <p class="section-subtitle">
+                    Preencha esta seção com dados reais da empresa para deixar a apresentação ainda mais forte e confiável.
+                </p>
+            </div>
+
+            <div class="institution-grid">
+                <div class="institution-card">
+                    <h4>Dados corporativos</h4>
+                    <p>Essas informações ajudam a sustentar uma imagem empresarial mais séria e passam mais confiança para quem está avaliando contratar.</p>
+                    <ul class="institution-list">
+                        <li><i class="fa-solid fa-check"></i><span><strong>Razão social:</strong> MVDL Transportes</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>CNPJ:</strong> 00.000.000/0001-00</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>E-mail comercial:</strong> contato@transportesmvdl@gmail.com</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>Base de atendimento:</strong> São Paulo / Jandira</span></li>
+                        <li><i class="fa-solid fa-check"></i><span><strong>Horário comercial:</strong> Segunda a sexta, das 08h às 18h</span></li>
+                    </ul>
+                </div>
+
+                <div class="institution-card">
+                    <h4>O que essa estrutura transmite?</h4>
+                    <p>Quando a empresa se apresenta com consistência, o visitante percebe mais qualidade, mais segurança e mais profissionalismo no atendimento.</p>
+                    <ul class="institution-list">
+                        <li><i class="fa-solid fa-check"></i><span>Melhor imagem de marca</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Mais confiança no primeiro contato</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Mais facilidade para justificar valor</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Mais força institucional e comercial</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Presença digital compatível com empresas sérias</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-star"></i> Depoimentos</div>
+                <h2 class="section-title">Uma das partes que mais reforçam a confiança na empresa</h2>
+                <p class="section-subtitle">
+                    Troque os textos abaixo por depoimentos reais para deixar a página ainda mais forte comercialmente.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Atendimento rápido e claro</h4>
+                    <p>“A apresentação da empresa transmite organização e profissionalismo. O retorno foi rápido e o atendimento foi muito bem conduzido.”</p>
+                    <div class="testimonial-author">
+                        <strong>Nome do cliente</strong>
+                        <span>Empresa / Cargo</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Mais confiança para contratar</h4>
+                    <p>“Ter um site com essa qualidade visual ajuda muito a perceber que a empresa é séria e está preparada para atender com mais estrutura.”</p>
+                    <div class="testimonial-author">
+                        <strong>Nome do cliente</strong>
+                        <span>Empresa / Cargo</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <h4>Imagem mais forte da marca</h4>
+                    <p>“A empresa passa mais credibilidade, mais clareza e uma sensação muito melhor de profissionalismo no digital.”</p>
+                    <div class="testimonial-author">
+                        <strong>Nome do cliente</strong>
+                        <span>Empresa / Cargo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="regioes">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow"><i class="fa-solid fa-map-location-dot"></i> Regiões atendidas</div>
+                <h2 class="section-title">Atuação em São Paulo, Jandira e região</h2>
+                <p class="section-subtitle">
+                    Mostrar com clareza onde a empresa atende também ajuda a transmitir proximidade e confiança.
+                </p>
+            </div>
+
+            <div class="regions-grid">
+                <div class="region-card">
+                    <div class="region-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h4>Jandira</h4>
+                    <p>Atendimento com proximidade e mais agilidade para demandas locais e operacionais.</p>
+                </div>
+
+                <div class="region-card">
+                    <div class="region-icon"><i class="fa-solid fa-city"></i></div>
+                    <h4>São Paulo</h4>
+                    <p>Suporte para empresas que precisam de atendimento organizado e comunicação mais eficiente.</p>
+                </div>
+
+                <div class="region-card">
+                    <div class="region-icon"><i class="fa-solid fa-map"></i></div>
+                    <h4>Grande São Paulo</h4>
+                    <p>Estrutura preparada para atender operações com mais clareza, eficiência e suporte profissional.</p>
                 </div>
             </div>
         </div>
@@ -1156,16 +1557,18 @@
             <div class="quote-section">
                 <div class="quote-grid">
                     <div class="quote-box">
-                        <div class="eyebrow" style="background: rgba(255,255,255,.10); color: #f0c9a2;">Orçamento rápido</div>
-                        <h3>Solicite atendimento comercial com agilidade</h3>
+                        <div class="eyebrow" style="background: rgba(255,255,255,.10); color: #f0c9a2;">
+                            <i class="fa-solid fa-file-signature"></i> Solicite sua proposta
+                        </div>
+                        <h3>Receba atendimento com mais agilidade e organização</h3>
                         <p>
-                            Fale diretamente pelo WhatsApp para solicitar orçamento, apresentar sua demanda e alinhar a melhor solução para sua operação.
+                            Fale com a MVDL Transportes para apresentar sua necessidade, solicitar um orçamento e alinhar o melhor atendimento para a sua operação.
                         </p>
                         <div class="hero-buttons">
-                            <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-accent">
+                            <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
                                 <i class="fa-brands fa-whatsapp"></i> Pedir orçamento
                             </a>
-                            <a href="#contato" class="btn btn-outline">
+                            <a href="#contato" class="btn btn-outline-light">
                                 <i class="fa-solid fa-paper-plane"></i> Ir para contato
                             </a>
                         </div>
@@ -1173,11 +1576,11 @@
 
                     <div class="quote-card">
                         <ul>
-                            <li><i class="fa-solid fa-check"></i> Atendimento direto e rápido pelo WhatsApp</li>
-                            <li><i class="fa-solid fa-check"></i> Transporte e apoio operacional</li>
-                            <li><i class="fa-solid fa-check"></i> Serviços HR com postura profissional</li>
-                            <li><i class="fa-solid fa-check"></i> Prestadora de serviços da Mega100</li>
-                            <li><i class="fa-solid fa-check"></i> Comunicação clara e objetiva</li>
+                            <li><i class="fa-solid fa-check"></i> Apresentação profissional da empresa</li>
+                            <li><i class="fa-solid fa-check"></i> Mais clareza para alinhar a demanda</li>
+                            <li><i class="fa-solid fa-check"></i> Apoio à imagem e ao relacionamento comercial</li>
+                            <li><i class="fa-solid fa-check"></i> Comunicação rápida, acessível e objetiva</li>
+                            <li><i class="fa-solid fa-check"></i> Mais confiança na hora de contratar</li>
                         </ul>
                     </div>
                 </div>
@@ -1185,44 +1588,54 @@
         </div>
     </section>
 
-    <section class="section" id="faq">
+    <section class="section faq-section" id="faq">
         <div class="container">
             <div class="section-header">
-                <div class="eyebrow">FAQ</div>
+                <div class="eyebrow"><i class="fa-solid fa-circle-question"></i> FAQ</div>
                 <h2 class="section-title">Perguntas frequentes</h2>
                 <p class="section-subtitle">
-                    Dúvidas comuns sobre os serviços, atendimento e área de atuação da MVDL Transportes.
+                    Respostas rápidas para dúvidas comuns sobre atendimento, estrutura da empresa e formas de contato.
                 </p>
             </div>
 
             <div class="faq-wrap">
                 <div class="faq-item">
-                    <button class="faq-question">
-                        Quais serviços a MVDL Transportes realiza?
+                    <button class="faq-question" aria-expanded="false">
+                        Quais serviços a empresa oferece?
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>A MVDL Transportes atua com transporte, serviços HR e apoio operacional, sempre com foco em organização, segurança e eficiência no atendimento.</p>
+                        <p>A MVDL Transportes atua com transporte, apoio logístico, apoio operacional e atendimento comercial para empresas que buscam mais agilidade, clareza e profissionalismo.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question">
-                        Onde a empresa atua?
+                    <button class="faq-question" aria-expanded="false">
+                        Onde a empresa atende?
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>A empresa atua em São Paulo / Jandira, com suporte comercial rápido e operação alinhada às necessidades de cada demanda.</p>
+                        <p>A empresa atende São Paulo, Jandira e região, com foco em oferecer proximidade, confiança e agilidade no atendimento.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question">
+                    <button class="faq-question" aria-expanded="false">
                         Como solicitar orçamento?
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Você pode solicitar orçamento diretamente pelo WhatsApp ou enviar sua necessidade pelo formulário disponível na seção de contato.</p>
+                        <p>Você pode solicitar orçamento pelo WhatsApp, telefone, e-mail ou formulário. Quanto mais detalhes enviar, mais rápido e objetivo será o atendimento inicial.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        O que este site transmite para quem visita?
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ele transmite uma imagem mais profissional, organizada e confiável da empresa, ajudando o cliente a perceber mais valor já no primeiro contato.</p>
                     </div>
                 </div>
             </div>
@@ -1232,17 +1645,17 @@
     <section class="section" id="contato">
         <div class="container">
             <div class="section-header">
-                <div class="eyebrow">Contato</div>
+                <div class="eyebrow"><i class="fa-solid fa-envelope-open-text"></i> Contato</div>
                 <h2 class="section-title">Fale com a MVDL Transportes</h2>
                 <p class="section-subtitle">
-                    Atendimento direto para transporte, serviços HR e apoio operacional.
+                    Envie sua necessidade e receba retorno com mais agilidade para alinhar a melhor solução para sua empresa.
                 </p>
             </div>
 
             <div class="contact-grid">
                 <div class="contact-card">
-                    <h3>Informações comerciais</h3>
-                    <p>Entre em contato para apresentar sua necessidade, solicitar orçamento ou iniciar um atendimento comercial com rapidez.</p>
+                    <h3>Atendimento comercial</h3>
+                    <p>Entre em contato para solicitar orçamento, apresentar sua demanda ou iniciar um atendimento com mais rapidez, clareza e organização.</p>
 
                     <div class="contact-list">
                         <a href="tel:+5511963602617" class="contact-item">
@@ -1253,7 +1666,7 @@
                             </div>
                         </a>
 
-                        <a href="https://wa.me/5511963602617" target="_blank" class="contact-item">
+                        <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="contact-item">
                             <i class="fa-brands fa-whatsapp"></i>
                             <div>
                                 <strong>WhatsApp</strong>
@@ -1261,7 +1674,15 @@
                             </div>
                         </a>
 
-                        <a href="https://www.instagram.com/storemvdl/" target="_blank" class="contact-item">
+                        <a href="mailto:contato@transportesmvdl@gmail.com" class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <strong>E-mail</strong>
+                                <span>contato@transportesmvdl@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.instagram.com/storemvdl/" target="_blank" rel="noopener noreferrer" class="contact-item">
                             <i class="fa-brands fa-instagram"></i>
                             <div>
                                 <strong>Instagram</strong>
@@ -1276,19 +1697,63 @@
                                 <span>São Paulo / Jandira</span>
                             </div>
                         </div>
+
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Horário comercial</strong>
+                                <span>Segunda a sexta, das 08h às 18h</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="contact-form">
-                    <h3>Solicitar contato</h3>
+                    <h3>Solicitar orçamento</h3>
                     <form class="form-grid" onsubmit="enviarWhats(event)">
-                        <input type="text" id="nome" placeholder="Seu nome" required>
-                        <input type="text" id="empresa" placeholder="Empresa">
-                        <input type="tel" id="telefone" placeholder="Seu telefone" required>
-                        <textarea id="mensagem" rows="5" placeholder="Descreva sua necessidade"></textarea>
+                        <div class="form-row">
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                            <input type="text" id="empresa" placeholder="Nome da empresa">
+                        </div>
+
+                        <div class="form-row">
+                            <input type="tel" id="telefone" placeholder="Telefone ou WhatsApp" required>
+                            <input type="email" id="email" placeholder="Seu e-mail">
+                        </div>
+
+                        <div class="form-row">
+                            <select id="servico">
+                                <option value="">Selecione o serviço</option>
+                                <option>Transporte Operacional</option>
+                                <option>Apoio Logístico</option>
+                                <option>Apoio Operacional</option>
+                                <option>Atendimento Comercial</option>
+                                <option>Outro</option>
+                            </select>
+
+                            <select id="urgencia">
+                                <option value="">Nível de urgência</option>
+                                <option>Baixa</option>
+                                <option>Média</option>
+                                <option>Alta</option>
+                                <option>Imediata</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <input type="text" id="cidade" placeholder="Cidade ou região da operação">
+                            <input type="text" id="segmentoEmpresa" placeholder="Segmento da empresa">
+                        </div>
+
+                        <textarea id="mensagem" rows="6" placeholder="Descreva sua necessidade com mais detalhes"></textarea>
+
                         <button type="submit" class="btn btn-dark">
-                            <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+                            <i class="fa-brands fa-whatsapp"></i> Enviar solicitação
                         </button>
+
+                        <p class="form-note">
+                            Ao enviar, sua solicitação será encaminhada para o WhatsApp comercial da empresa com as informações preenchidas.
+                        </p>
                     </form>
                 </div>
             </div>
@@ -1298,15 +1763,16 @@
     <section class="section">
         <div class="container">
             <div class="cta-box">
-                <h2>Fale com a MVDL Transportes e leve mais eficiência para sua operação</h2>
+                <h2>Uma apresentação digital à altura da confiança que sua empresa quer transmitir</h2>
                 <p>
-                    Atendimento ágil, comunicação clara e suporte profissional para empresas que buscam mais organização, confiança e qualidade no serviço prestado.
+                    Este projeto foi desenvolvido para posicionar a MVDL Transportes com mais credibilidade, mais clareza e mais força comercial no ambiente digital.
                 </p>
+
                 <div class="cta-buttons">
-                    <a href="#orcamento" class="btn btn-accent">
+                    <a href="#orcamento" class="btn btn-gold">
                         <i class="fa-solid fa-file-signature"></i> Solicitar orçamento
                     </a>
-                    <a href="https://wa.me/5511963602617" target="_blank" class="btn btn-outline">
+                    <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
                         <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
                     </a>
                 </div>
@@ -1323,11 +1789,15 @@
                         MVDL <span>Transportes</span>
                     </a>
                     <p>
-                        Soluções em transporte, serviços HR e apoio operacional, com atuação em São Paulo / Jandira e foco em atendimento profissional.
+                        Soluções em transporte, apoio operacional e atendimento comercial com uma apresentação profissional para fortalecer a confiança e o relacionamento com o cliente.
                     </p>
+
                     <div class="social-links">
-                        <a href="https://www.instagram.com/storemvdl/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/storemvdl/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
@@ -1338,29 +1808,30 @@
                         <a href="#inicio">Início</a>
                         <a href="#sobre">Sobre</a>
                         <a href="#servicos">Serviços</a>
-                        <a href="#diferenciais">Diferenciais</a>
-                        <a href="#orcamento">Orçamento</a>
-                        <a href="#faq">FAQ</a>
+                        <a href="#valores">Diferenciais</a>
+                        <a href="#como-funciona">Processo</a>
+                        <a href="#depoimentos">Depoimentos</a>
                         <a href="#contato">Contato</a>
                     </div>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Serviços</h4>
+                    <h4>Institucional</h4>
                     <div class="footer-links">
-                        <a href="#servicos">Transporte Operacional</a>
-                        <a href="#servicos">Serviços HR</a>
-                        <a href="#servicos">Apoio Logístico</a>
-                        <a href="#servicos">Atendimento Comercial</a>
+                        <a href="#institucional">Dados da empresa</a>
+                        <a href="#parceiros">Clientes e parceiros</a>
+                        <a href="#credibilidade">Credibilidade</a>
+                        <a href="#">Política de privacidade</a>
                     </div>
                 </div>
 
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <p><a href="tel:+5511963602617"><i class="fa-solid fa-phone"></i> +55 11 96360-2617</a></p>
-                    <p><a href="https://wa.me/5511963602617" target="_blank"><i class="fa-brands fa-whatsapp"></i> +55 11 96360-2617</a></p>
-                    <p><a href="https://www.instagram.com/storemvdl/" target="_blank"><i class="fa-brands fa-instagram"></i> @storemvdl</a></p>
+                    <p><a href="mailto:contato@transportesmvdl@gmail.com"><i class="fa-solid fa-envelope"></i> contato@transportesmvdl@gmail.com</a></p>
+                    <p><a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp comercial</a></p>
                     <p><i class="fa-solid fa-location-dot"></i> São Paulo / Jandira</p>
+                    <p><i class="fa-solid fa-id-card"></i> CNPJ: 00.000.000/0001-00</p>
                 </div>
             </div>
         </div>
@@ -1370,7 +1841,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5511963602617" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/5511963602617" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
         <span>WhatsApp</span>
     </a>
@@ -1380,21 +1851,39 @@
             document.getElementById('navbar').classList.toggle('active');
         }
 
+        document.querySelectorAll('#navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbar').classList.remove('active');
+            });
+        });
+
         function enviarWhats(event) {
             event.preventDefault();
 
             const nome = document.getElementById('nome').value || '';
             const empresa = document.getElementById('empresa').value || '';
             const telefone = document.getElementById('telefone').value || '';
+            const email = document.getElementById('email').value || '';
+            const servico = document.getElementById('servico').value || '';
+            const urgencia = document.getElementById('urgencia').value || '';
+            const cidade = document.getElementById('cidade').value || '';
+            const segmentoEmpresa = document.getElementById('segmentoEmpresa').value || '';
             const mensagem = document.getElementById('mensagem').value || '';
 
-            const texto =
-                `Olá, meu nome é ${nome}%0A` +
-                `Empresa: ${empresa}%0A` +
-                `Telefone: ${telefone}%0A` +
-                `Mensagem: ${mensagem}`;
+            const texto = `Olá, gostaria de solicitar um orçamento.
 
-            window.open(`https://wa.me/5511963602617?text=${texto}`, '_blank');
+Nome: ${nome}
+Empresa: ${empresa}
+Telefone: ${telefone}
+E-mail: ${email}
+Serviço: ${servico}
+Urgência: ${urgencia}
+Cidade/Região: ${cidade}
+Segmento da empresa: ${segmentoEmpresa}
+Mensagem: ${mensagem}`;
+
+            const url = `https://wa.me/5511963602617?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
         }
 
         document.querySelectorAll('.faq-item').forEach(item => {
@@ -1407,11 +1896,33 @@
                 document.querySelectorAll('.faq-item').forEach(faq => {
                     faq.classList.remove('active');
                     faq.querySelector('.faq-answer').style.maxHeight = null;
+                    faq.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                 });
 
                 if (!isActive) {
                     item.classList.add('active');
                     answer.style.maxHeight = answer.scrollHeight + 'px';
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('#navbar a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 140;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
                 }
             });
         });
