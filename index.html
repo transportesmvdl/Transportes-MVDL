@@ -4,31 +4,31 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVDL Transportes | Transporte e Logística para Empresas</title>
-    <meta name="description" content="MVDL Transportes. Soluções em transporte, apoio logístico e operações corporativas para empresas em São Paulo, Jandira e região." />
-    <meta name="theme-color" content="#1b2636" />
+    <title>MVDL Transportes | Logística Corporativa de Alto Padrão</title>
+    <meta name="description" content="MVDL Transportes. Soluções em transporte e apoio logístico com padrão profissional para empresas em São Paulo, Jandira e região." />
+    <meta name="theme-color" content="#111315" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
          :root {
-            --yellow: #1b2636;
-            --yellow-soft: #243447;
-            --red: #7a838f;
-            --red-dark: #68707b;
-            --black: #111111;
-            --dark: #181818;
-            --gray: #5f5f5f;
-            --gray-2: #7a7a7a;
-            --light: #f6f6f6;
-            --line: #e5e5e5;
+            --charcoal: #111315;
+            --graphite: #1a1f24;
+            --graphite-soft: #232a31;
+            --offwhite: #f5f1eb;
+            --champagne: #c6b08a;
+            --bronze: #9c8662;
+            --stone: #d9d2c7;
+            --text: #7b7e83;
+            --line: rgba(255, 255, 255, 0.08);
+            --line-light: #e8e1d7;
             --white: #ffffff;
             --container: 1280px;
-            --shadow: 0 18px 40px rgba(0, 0, 0, .08);
-            --transition: .3s ease;
+            --shadow: 0 20px 50px rgba(0, 0, 0, .18);
+            --transition: .35s ease;
         }
         
         * {
@@ -42,9 +42,9 @@
         }
         
         body {
-            font-family: "Inter", sans-serif;
-            color: var(--black);
-            background: var(--white);
+            font-family: "Manrope", sans-serif;
+            background: var(--offwhite);
+            color: var(--charcoal);
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -63,37 +63,48 @@
         .container {
             max-width: var(--container);
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 28px;
         }
         
         .section {
-            padding: 86px 0;
+            padding: 110px 0;
         }
         
         .eyebrow {
-            display: inline-block;
-            color: var(--red);
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: .14em;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .22em;
             text-transform: uppercase;
-            margin-bottom: 16px;
+            color: var(--champagne);
+            margin-bottom: 18px;
+        }
+        
+        .eyebrow::before {
+            content: "";
+            width: 34px;
+            height: 1px;
+            background: var(--champagne);
+            display: inline-block;
         }
         
         .section-title {
-            font-size: clamp(34px, 4vw, 58px);
-            line-height: .98;
-            letter-spacing: -.06em;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 16px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(44px, 5vw, 78px);
+            line-height: .95;
+            font-weight: 600;
+            letter-spacing: -.04em;
+            margin-bottom: 18px;
+            color: var(--charcoal);
         }
         
         .section-subtitle {
-            max-width: 760px;
-            color: var(--gray);
+            max-width: 820px;
+            color: var(--text);
             font-size: 16px;
-            line-height: 1.8;
+            line-height: 1.95;
         }
         
         .btn {
@@ -101,43 +112,47 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 16px 24px;
-            font-size: 14px;
-            font-weight: 900;
+            min-height: 54px;
+            padding: 16px 26px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .12em;
             text-transform: uppercase;
-            letter-spacing: .05em;
-            border: none;
+            border: 1px solid transparent;
             cursor: pointer;
             transition: var(--transition);
-            font-family: inherit;
+            font-family: "Manrope", sans-serif;
         }
         
         .btn-primary {
-            background: var(--red);
-            color: #fff;
+            background: var(--champagne);
+            color: var(--charcoal);
         }
         
         .btn-primary:hover {
-            background: var(--red-dark);
+            background: var(--bronze);
+            color: var(--white);
         }
         
         .btn-outline {
             background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
+            color: var(--white);
+            border-color: rgba(255, 255, 255, .28);
         }
         
         .btn-outline:hover {
-            background: #fff;
-            color: var(--black);
+            background: var(--white);
+            color: var(--charcoal);
+            border-color: var(--white);
         }
         
         .header {
-            background: #fff;
-            border-bottom: 1px solid var(--line);
             position: sticky;
             top: 0;
             z-index: 999;
+            backdrop-filter: blur(14px);
+            background: rgba(245, 241, 235, 0.86);
+            border-bottom: 1px solid rgba(17, 19, 21, 0.06);
         }
         
         .header-main {
@@ -155,14 +170,15 @@
         }
         
         .logo-mark {
-            background: var(--yellow);
-            color: #ffffff;
-            min-width: 76px;
-            padding: 12px 14px;
-            text-align: center;
-            font-size: 22px;
-            font-weight: 900;
-            line-height: 1;
+            min-width: 74px;
+            height: 54px;
+            display: grid;
+            place-items: center;
+            background: var(--charcoal);
+            color: var(--champagne);
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: .08em;
         }
         
         .logo-text {
@@ -172,32 +188,30 @@
         }
         
         .logo-text strong {
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: -.05em;
-            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -.04em;
         }
         
         .logo-text span {
             margin-top: 6px;
-            font-size: 11px;
-            font-weight: 800;
-            letter-spacing: .14em;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .18em;
             text-transform: uppercase;
-            color: var(--gray);
+            color: var(--text);
         }
         
         .header-right {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 26px;
         }
         
         .header-contact {
             display: flex;
             align-items: center;
-            gap: 22px;
-            flex-wrap: wrap;
+            gap: 24px;
         }
         
         .header-contact-item {
@@ -207,365 +221,378 @@
         }
         
         .header-contact-item i {
-            color: var(--red);
-            font-size: 18px;
+            color: var(--champagne);
+            font-size: 16px;
         }
         
         .header-contact-item div strong {
             display: block;
-            font-size: 11px;
-            font-weight: 900;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: .14em;
             text-transform: uppercase;
-            color: var(--gray-2);
-            margin-bottom: 3px;
+            color: var(--text);
+            margin-bottom: 2px;
         }
         
         .header-contact-item div span,
         .header-contact-item div a {
-            font-size: 14px;
-            font-weight: 800;
-            color: var(--black);
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--charcoal);
         }
         
         .nav-row {
-            border-top: 1px solid var(--line);
-            min-height: 60px;
+            min-height: 58px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 18px;
+            position: relative;
+            border-top: 1px solid rgba(17, 19, 21, 0.06);
         }
         
         nav ul {
             list-style: none;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 28px;
         }
         
         nav a {
-            font-size: 13px;
-            font-weight: 900;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .14em;
             text-transform: uppercase;
-            letter-spacing: .06em;
-            color: var(--black);
+            color: var(--charcoal);
+            position: relative;
         }
         
-        nav a:hover {
-            color: var(--red);
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 1px;
+            background: var(--champagne);
+            transition: var(--transition);
         }
         
-        .nav-tools {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        nav a:hover::after {
+            width: 100%;
         }
         
         .menu-toggle {
             display: none;
             font-size: 24px;
             cursor: pointer;
+            color: var(--charcoal);
         }
         
         .hero {
-            background: linear-gradient(90deg, #1b2636 0%, #243447 58%, #31475c 100%);
             position: relative;
+            min-height: 100vh;
             overflow: hidden;
+            background: linear-gradient(90deg, rgba(17, 19, 21, .95) 0%, rgba(17, 19, 21, .88) 42%, rgba(17, 19, 21, .28) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
         }
         
-        .hero::after {
-            content: "";
+        .hero-overlay {
             position: absolute;
-            top: 0;
-            right: 0;
-            width: 46%;
-            height: 100%;
-            background: linear-gradient(115deg, rgba(17, 17, 17, .22), rgba(17, 17, 17, .32)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+            inset: 0;
+            background: radial-gradient(circle at 18% 22%, rgba(198, 176, 138, .10), transparent 28%), radial-gradient(circle at 82% 18%, rgba(198, 176, 138, .06), transparent 24%);
+            pointer-events: none;
         }
         
         .hero-grid {
-            min-height: 82vh;
-            display: grid;
-            grid-template-columns: 1.05fr .95fr;
-            gap: 20px;
-            align-items: center;
             position: relative;
             z-index: 2;
-            padding: 66px 0;
+            min-height: calc(100vh - 142px);
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
+            align-items: center;
+            gap: 40px;
+            padding: 90px 0 70px;
         }
         
         .hero-content {
-            max-width: 740px;
+            max-width: 760px;
         }
         
         .hero-kicker {
-            display: inline-block;
-            margin-bottom: 18px;
-            color: #aab3be;
-            font-size: 12px;
-            font-weight: 900;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--champagne);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .24em;
             text-transform: uppercase;
-            letter-spacing: .18em;
+            margin-bottom: 26px;
+        }
+        
+        .hero-kicker::before {
+            content: "";
+            width: 36px;
+            height: 1px;
+            background: var(--champagne);
         }
         
         .hero-title {
-            font-size: clamp(46px, 6vw, 90px);
-            line-height: .9;
-            letter-spacing: -.08em;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 22px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(56px, 7vw, 110px);
+            line-height: .86;
+            letter-spacing: -.05em;
+            font-weight: 600;
+            color: var(--offwhite);
+            margin-bottom: 24px;
             max-width: 760px;
-            color: #fff;
         }
         
         .hero-text {
-            color: rgba(255, 255, 255, .82);
+            color: rgba(245, 241, 235, .76);
             font-size: 17px;
-            line-height: 1.85;
-            max-width: 610px;
-            margin-bottom: 30px;
-            font-weight: 500;
+            line-height: 2;
+            max-width: 630px;
+            margin-bottom: 36px;
         }
         
         .hero-actions {
             display: flex;
-            flex-wrap: wrap;
             gap: 14px;
-            margin-bottom: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 42px;
         }
         
         .hero-modules {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            max-width: 780px;
+            gap: 16px;
+            max-width: 860px;
         }
         
         .hero-module {
-            background: rgba(255, 255, 255, .10);
-            border-top: 4px solid var(--red);
-            padding: 18px;
-            backdrop-filter: blur(4px);
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            padding: 24px 22px;
+            backdrop-filter: blur(6px);
         }
         
         .hero-module strong {
             display: block;
-            font-size: 14px;
-            font-weight: 900;
+            color: var(--offwhite);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .10em;
             text-transform: uppercase;
-            margin-bottom: 6px;
-            color: #fff;
+            margin-bottom: 10px;
         }
         
         .hero-module span {
-            color: rgba(255, 255, 255, .78);
+            color: rgba(245, 241, 235, .70);
             font-size: 13px;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         
-        .strip {
-            background: var(--red);
-            color: #fff;
+        .hero-side-note {
+            justify-self: end;
+            align-self: end;
+            max-width: 320px;
+            padding: 28px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .08);
+            backdrop-filter: blur(8px);
         }
         
-        .strip-grid {
-            min-height: 84px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            align-items: center;
-        }
-        
-        .strip-item {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 14px;
-            font-weight: 800;
+        .hero-side-note strong {
+            display: block;
+            color: var(--champagne);
+            font-size: 11px;
+            letter-spacing: .18em;
             text-transform: uppercase;
-            line-height: 1.4;
+            margin-bottom: 10px;
         }
         
-        .strip-item i {
-            font-size: 18px;
-            color: #fff;
+        .hero-side-note p {
+            color: rgba(245, 241, 235, .72);
+            font-size: 14px;
+            line-height: 1.9;
         }
         
-        .feature-panel {
-            background: #fff;
-            border: 1px solid var(--line);
+        .split-panel {
+            background: var(--white);
+            border: 1px solid var(--line-light);
+            box-shadow: 0 18px 50px rgba(17, 19, 21, .06);
             overflow: hidden;
         }
         
-        .feature-grid {
+        .split-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             align-items: stretch;
         }
         
-        .feature-content {
-            padding: 42px;
+        .split-content {
+            padding: 54px;
         }
         
-        .feature-content p {
-            color: var(--gray);
+        .split-content p {
+            color: var(--text);
             font-size: 15px;
-            line-height: 1.9;
-            margin-bottom: 16px;
+            line-height: 2;
+            margin-bottom: 18px;
         }
         
-        .feature-media img {
+        .split-media img {
             width: 100%;
             height: 100%;
-            min-height: 460px;
+            min-height: 560px;
             object-fit: cover;
+            filter: saturate(.9) contrast(1.03);
         }
         
-        .stats {
-            background: #121212;
-            color: #fff;
+        .prestige-band {
+            background: var(--charcoal);
+            color: var(--offwhite);
         }
         
-        .stats-grid {
+        .prestige-grid {
+            min-height: 120px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
+            align-items: center;
         }
         
-        .stat-card strong {
-            display: block;
-            color: #9aa3ad;
-            font-size: 38px;
-            line-height: 1;
-            font-weight: 900;
-            letter-spacing: -.05em;
-            margin-bottom: 10px;
+        .prestige-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        
+        .prestige-item i {
+            color: var(--champagne);
+            font-size: 18px;
+        }
+        
+        .prestige-item span {
+            font-size: 13px;
+            line-height: 1.7;
             text-transform: uppercase;
+            letter-spacing: .08em;
+            font-weight: 700;
         }
         
-        .stat-card span {
-            display: block;
-            color: rgba(255, 255, 255, .74);
-            font-size: 14px;
-            line-height: 1.75;
-        }
-        
-        .cards-4,
-        .cards-3 {
+        .cards-3,
+        .cards-4 {
             display: grid;
-            gap: 22px;
+            gap: 24px;
+        }
+        
+        .cards-3 {
+            grid-template-columns: repeat(3, 1fr);
         }
         
         .cards-4 {
             grid-template-columns: repeat(4, 1fr);
         }
         
-        .cards-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
         .card {
-            background: #fff;
-            border: 1px solid var(--line);
-            padding: 30px 24px;
+            background: rgba(255, 255, 255, .78);
+            border: 1px solid var(--line-light);
+            padding: 34px 30px;
             transition: var(--transition);
+            backdrop-filter: blur(4px);
         }
         
         .card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-8px);
             box-shadow: var(--shadow);
+            background: var(--white);
         }
         
         .card-icon {
-            width: 60px;
-            height: 60px;
+            width: 62px;
+            height: 62px;
             display: grid;
             place-items: center;
-            background: var(--yellow);
-            color: #fff;
-            font-size: 22px;
-            margin-bottom: 18px;
+            background: var(--charcoal);
+            color: var(--champagne);
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         
         .card h4 {
-            font-size: 20px;
-            font-weight: 900;
+            font-size: 19px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            letter-spacing: -.02em;
             text-transform: uppercase;
-            line-height: 1.18;
-            letter-spacing: -.03em;
-            margin-bottom: 10px;
         }
         
         .card p {
-            color: var(--gray);
+            color: var(--text);
             font-size: 14px;
-            line-height: 1.85;
+            line-height: 1.9;
         }
         
         .dark-section {
-            background: #151515;
-            color: #fff;
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--graphite) 100%);
+            color: var(--offwhite);
         }
         
-        .dark-section .section-title,
-        .dark-section .section-subtitle {
-            color: #fff;
+        .dark-section .section-title {
+            color: var(--offwhite);
         }
         
         .dark-section .section-subtitle {
-            color: rgba(255, 255, 255, .72);
+            color: rgba(245, 241, 235, .70);
         }
         
         .dark-section .card {
-            background: #1d1d1d;
-            border-color: rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .03);
+            border: 1px solid rgba(255, 255, 255, .08);
         }
         
         .dark-section .card p {
-            color: rgba(255, 255, 255, .72);
+            color: rgba(245, 241, 235, .70);
         }
         
         .step-number {
-            font-size: 48px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 54px;
             line-height: 1;
-            font-weight: 900;
-            color: var(--red);
-            margin-bottom: 12px;
-            letter-spacing: -.06em;
+            color: var(--champagne);
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         
-        .yellow-banner {
-            background: linear-gradient(135deg, #1b2636 0%, #243447 100%);
-            padding: 72px 0;
+        .lux-banner {
+            background: linear-gradient(135deg, #171b1f 0%, #232a31 100%);
+            color: var(--offwhite);
         }
         
-        .yellow-banner h3,
-        .yellow-banner p,
-        .banner-list li {
-            color: #fff;
-        }
-        
-        .yellow-banner-grid {
+        .lux-banner-grid {
             display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 40px;
+            grid-template-columns: 1.12fr .88fr;
+            gap: 42px;
             align-items: center;
         }
         
-        .yellow-banner h3 {
-            font-size: clamp(34px, 4vw, 56px);
-            line-height: .96;
-            letter-spacing: -.06em;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 14px;
+        .lux-banner h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(42px, 4.8vw, 74px);
+            line-height: .94;
+            font-weight: 600;
+            letter-spacing: -.04em;
+            margin-bottom: 16px;
+            color: var(--offwhite);
         }
         
-        .yellow-banner p {
+        .lux-banner p {
             font-size: 16px;
-            line-height: 1.85;
+            line-height: 1.95;
+            color: rgba(245, 241, 235, .74);
         }
         
         .banner-list {
@@ -576,20 +603,20 @@
         
         .banner-list li {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             align-items: flex-start;
             font-size: 14px;
-            line-height: 1.8;
-            font-weight: 700;
+            line-height: 1.9;
+            color: var(--offwhite);
         }
         
         .banner-list i {
-            color: #b8c0c8;
-            margin-top: 4px;
+            color: var(--champagne);
+            margin-top: 5px;
         }
         
         .faq-section {
-            background: var(--light);
+            background: #f0ebe4;
         }
         
         .faq-wrap {
@@ -600,28 +627,31 @@
         }
         
         .faq-item {
-            background: #fff;
-            border: 1px solid var(--line);
+            background: var(--white);
+            border: 1px solid var(--line-light);
         }
         
         .faq-question {
             width: 100%;
             background: none;
             border: none;
-            padding: 22px 24px;
+            padding: 24px 26px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
             text-align: left;
             cursor: pointer;
-            font-size: 15px;
-            font-weight: 900;
+            font-size: 14px;
+            font-weight: 800;
+            line-height: 1.6;
+            letter-spacing: .08em;
             text-transform: uppercase;
+            color: var(--charcoal);
         }
         
         .faq-question i {
-            color: var(--red);
+            color: var(--champagne);
             transition: transform .3s ease;
         }
         
@@ -636,10 +666,10 @@
         }
         
         .faq-answer p {
-            padding: 0 24px 22px;
-            color: var(--gray);
+            padding: 0 26px 24px;
+            color: var(--text);
             font-size: 14px;
-            line-height: 1.85;
+            line-height: 1.95;
         }
         
         .contact-grid {
@@ -649,80 +679,86 @@
         }
         
         .contact-form {
-            background: #fff;
-            border: 1px solid var(--line);
-            padding: 34px;
-            max-width: 760px;
+            max-width: 860px;
             width: 100%;
             margin: 0 auto;
+            background: var(--white);
+            border: 1px solid var(--line-light);
+            padding: 48px;
+            box-shadow: 0 20px 50px rgba(17, 19, 21, .07);
         }
         
         .contact-form h3 {
-            font-size: 30px;
-            font-weight: 900;
-            text-transform: uppercase;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 46px;
+            line-height: .95;
+            font-weight: 600;
             letter-spacing: -.04em;
-            margin-bottom: 14px;
+            margin-bottom: 20px;
+            color: var(--charcoal);
         }
         
         .form-grid {
             display: grid;
-            gap: 14px;
+            gap: 16px;
         }
         
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: 16px;
         }
         
         .form-grid input,
         .form-grid select,
         .form-grid textarea {
             width: 100%;
-            padding: 15px 16px;
-            border: 1px solid #cfcfcf;
-            outline: none;
+            padding: 18px 18px;
+            border: 1px solid #ddd4c8;
             background: #fff;
-            font-size: 14px;
-            font-family: inherit;
+            font-size: 15px;
+            font-family: "Manrope", sans-serif;
+            color: var(--charcoal);
+            outline: none;
             resize: none;
+            transition: var(--transition);
         }
         
         .form-grid input:focus,
         .form-grid select:focus,
         .form-grid textarea:focus {
-            border-color: var(--red);
+            border-color: var(--champagne);
+            box-shadow: 0 0 0 4px rgba(198, 176, 138, .14);
         }
         
         .form-note {
-            color: var(--gray);
+            color: var(--text);
             font-size: 12px;
-            line-height: 1.7;
+            line-height: 1.8;
         }
         
         .final-cta {
-            background: var(--black);
-            color: #fff;
-            padding: 94px 0;
+            background: linear-gradient(135deg, #111315 0%, #1c2228 100%);
+            color: var(--offwhite);
             text-align: center;
+            padding: 120px 0;
         }
         
         .final-cta h2 {
-            font-size: clamp(36px, 5vw, 68px);
-            line-height: .95;
-            letter-spacing: -.06em;
-            text-transform: uppercase;
-            font-weight: 900;
-            margin-bottom: 16px;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 5.2vw, 86px);
+            line-height: .92;
+            font-weight: 600;
+            letter-spacing: -.04em;
+            margin-bottom: 18px;
         }
         
         .final-cta p {
-            max-width: 800px;
-            margin: 0 auto 28px;
-            color: rgba(255, 255, 255, .74);
-            font-size: 16px;
-            line-height: 1.85;
+            max-width: 860px;
+            margin: 0 auto 30px;
+            color: rgba(245, 241, 235, .72);
+            font-size: 17px;
+            line-height: 2;
         }
         
         .final-buttons {
@@ -733,33 +769,35 @@
         }
         
         footer {
-            background: #0c0c0c;
-            color: #fff;
+            background: #0d1013;
+            color: var(--offwhite);
         }
         
         .footer-top {
-            padding: 72px 0 36px;
+            padding: 88px 0 42px;
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 28px;
+            gap: 30px;
         }
         
         .footer-col h4 {
-            font-size: 15px;
-            font-weight: 900;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .16em;
             text-transform: uppercase;
+            color: var(--champagne);
             margin-bottom: 18px;
         }
         
         .footer-brand p,
         .footer-col p,
         .footer-col a {
-            color: rgba(255, 255, 255, .72);
+            color: rgba(245, 241, 235, .68);
             font-size: 14px;
-            line-height: 1.85;
+            line-height: 1.9;
         }
         
         .footer-links {
@@ -768,48 +806,59 @@
         }
         
         .footer-links a:hover {
-            color: #b8c0c8;
+            color: var(--champagne);
         }
         
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, .08);
-            padding: 18px 0;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding: 20px 0;
             text-align: center;
-            color: rgba(255, 255, 255, .56);
-            font-size: 13px;
+            color: rgba(245, 241, 235, .48);
+            font-size: 12px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
         }
         
         .whatsapp-float {
             position: fixed;
             right: 20px;
             bottom: 20px;
-            background: var(--red);
-            color: #fff;
+            background: var(--champagne);
+            color: var(--charcoal);
             padding: 14px 18px;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-size: 14px;
-            font-weight: 900;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .10em;
             text-transform: uppercase;
             z-index: 9999;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, .18);
         }
         
         @media (max-width: 1180px) {
             .hero-grid,
-            .feature-grid,
-            .yellow-banner-grid,
+            .split-grid,
+            .lux-banner-grid,
             .footer-grid {
                 grid-template-columns: 1fr;
             }
             .cards-4,
             .cards-3,
-            .stats-grid,
-            .strip-grid {
+            .prestige-grid,
+            .hero-modules {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .hero::after {
+            .hero-side-note {
+                justify-self: start;
+                align-self: start;
+            }
+            .hero {
+                background: linear-gradient(180deg, rgba(17, 19, 21, .92) 0%, rgba(17, 19, 21, .92) 100%), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+            }
+            .hero::after,
+            .hero::before {
                 display: none;
             }
         }
@@ -821,20 +870,17 @@
             .menu-toggle {
                 display: block;
             }
-            .nav-row {
-                position: relative;
-            }
             nav {
                 position: absolute;
-                top: 60px;
+                top: 58px;
                 left: 0;
                 width: 100%;
-                background: #fff;
+                background: var(--offwhite);
                 max-height: 0;
                 overflow: hidden;
                 transition: .3s ease;
-                border-top: 1px solid var(--line);
-                z-index: 20;
+                border-top: 1px solid rgba(17, 19, 21, .06);
+                z-index: 30;
             }
             nav.active {
                 max-height: 700px;
@@ -851,8 +897,14 @@
             nav a {
                 display: block;
                 width: 100%;
-                padding: 15px 22px;
-                border-bottom: 1px solid var(--line);
+                padding: 16px 22px;
+                border-bottom: 1px solid rgba(17, 19, 21, .06);
+            }
+            .cards-4,
+            .cards-3,
+            .prestige-grid,
+            .hero-modules {
+                grid-template-columns: 1fr 1fr;
             }
         }
         
@@ -860,28 +912,88 @@
             .section {
                 padding: 72px 0;
             }
-            .hero-grid {
-                min-height: auto;
-                padding: 76px 0 54px;
+            .container {
+                padding: 0 18px;
             }
-            .hero-modules,
-            .strip-grid,
-            .cards-4,
-            .cards-3,
-            .stats-grid,
-            .footer-grid,
-            .form-row {
-                grid-template-columns: 1fr;
+            .header-main {
+                min-height: 72px;
+            }
+            .logo-mark {
+                min-width: 58px;
+                height: 46px;
+                font-size: 16px;
             }
             .logo-text strong {
-                font-size: 22px;
+                font-size: 20px;
             }
-            .feature-media img {
-                min-height: 320px;
+            .logo-text span {
+                font-size: 8px;
+                letter-spacing: .14em;
+            }
+            .hero-grid {
+                min-height: auto;
+                padding: 58px 0 48px;
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 42px;
+                line-height: .94;
+            }
+            .hero-text {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .hero-actions .btn {
+                width: 100%;
+            }
+            .hero-modules,
+            .cards-4,
+            .cards-3,
+            .prestige-grid,
+            .footer-grid,
+            .form-row,
+            .split-grid,
+            .lux-banner-grid {
+                grid-template-columns: 1fr;
+            }
+            .split-content,
+            .contact-form,
+            .card {
+                padding: 24px;
+            }
+            .split-media img {
+                min-height: 300px;
+            }
+            .section-title {
+                font-size: 36px;
+                line-height: 1;
+            }
+            .section-subtitle {
+                font-size: 14px;
+            }
+            .lux-banner h3,
+            .final-cta h2,
+            .contact-form h3 {
+                font-size: 34px;
+                line-height: 1;
+            }
+            .faq-question {
+                padding: 18px;
+                font-size: 12px;
+            }
+            .faq-answer p {
+                padding: 0 18px 18px;
+                font-size: 13px;
             }
             .whatsapp-float {
                 right: 14px;
                 bottom: 14px;
+                padding: 12px 14px;
+                font-size: 11px;
             }
         }
     </style>
@@ -932,99 +1044,135 @@
                 </ul>
             </nav>
 
-            <div class="nav-tools">
-                <div class="menu-toggle" id="menuToggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </header>
 
     <section class="hero" id="inicio">
+        <div class="hero-overlay"></div>
+
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="hero-kicker">Transporte • Logística • Operação corporativa</div>
-                <h1 class="hero-title">Estrutura para operações que exigem ritmo, resposta e confiança.</h1>
+                <h1 class="hero-title">Presença logística de alto padrão para operações que não podem falhar.</h1>
                 <p class="hero-text">
-                    A MVDL Transportes atende empresas com foco em transporte, apoio logístico e execução profissional. Uma operação séria, com comunicação objetiva e presença confiável para a rotina do seu negócio.
+                    A MVDL Transportes atende empresas com foco em execução séria, ritmo operacional, comunicação precisa e uma presença profissional compatível com ambientes corporativos exigentes.
                 </p>
 
                 <div class="hero-actions">
                     <a href="#solucoes" class="btn btn-outline">
                         <i class="fa-solid fa-arrow-down"></i> Ver soluções
                     </a>
+                    <a href="#contato" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Solicitar atendimento
+                    </a>
                 </div>
 
                 <div class="hero-modules">
                     <div class="hero-module">
                         <strong>Atendimento direto</strong>
-                        <span>Contato rápido para alinhamento comercial e operacional.</span>
+                        <span>Contato objetivo para reduzir ruído e acelerar o alinhamento operacional.</span>
                     </div>
                     <div class="hero-module">
-                        <strong>Base estratégica</strong>
-                        <span>Atuação em São Paulo, Jandira e região metropolitana.</span>
+                        <strong>Presença estratégica</strong>
+                        <span>Base operacional em São Paulo, Jandira e região metropolitana.</span>
                     </div>
                     <div class="hero-module">
-                        <strong>Perfil corporativo</strong>
-                        <span>Postura profissional para representar melhor sua operação.</span>
+                        <strong>Padrão profissional</strong>
+                        <span>Estrutura pensada para representar melhor sua operação diante do mercado.</span>
                     </div>
                 </div>
             </div>
 
-            <div></div>
+            <div class="hero-side-note">
+                <strong>Posicionamento</strong>
+                <p>
+                    Mais do que transporte, a MVDL sustenta a rotina operacional de empresas que valorizam clareza, seriedade e confiança na execução.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="strip">
-        <div class="container strip-grid">
-            <div class="strip-item"><i class="fa-solid fa-bolt"></i><span>Resposta rápida para demandas operacionais</span></div>
-            <div class="strip-item"><i class="fa-solid fa-shield-halved"></i><span>Mais confiança na execução logística</span></div>
-            <div class="strip-item"><i class="fa-solid fa-warehouse"></i><span>Suporte para operações corporativas</span></div>
-            <div class="strip-item"><i class="fa-solid fa-road"></i><span>Atuação regional com mais agilidade</span></div>
+    <section class="prestige-band">
+        <div class="container prestige-grid">
+            <div class="prestige-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Resposta rápida para demandas operacionais críticas</span>
+            </div>
+            <div class="prestige-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Mais confiança e previsibilidade na execução logística</span>
+            </div>
+            <div class="prestige-item">
+                <i class="fa-solid fa-warehouse"></i>
+                <span>Suporte alinhado a operações corporativas exigentes</span>
+            </div>
+            <div class="prestige-item">
+                <i class="fa-solid fa-road"></i>
+                <span>Atuação regional com clareza, presença e agilidade</span>
+            </div>
         </div>
     </section>
 
     <section class="section" id="empresa">
         <div class="container">
-            <div class="feature-panel">
-                <div class="feature-grid">
-                    <div class="feature-content">
+            <div class="split-panel">
+                <div class="split-grid">
+                    <div class="split-content">
                         <div class="eyebrow">Empresa</div>
-                        <h2 class="section-title">Estrutura pensada para operações que não podem falhar.</h2>
+                        <h2 class="section-title">Estrutura pensada para operações que exigem consistência, imagem e confiança.</h2>
                         <p>
-                            A MVDL Transportes foi posicionada para atender empresas que valorizam compromisso, clareza no contato e responsabilidade na execução das demandas logísticas.
+                            A MVDL Transportes foi posicionada para atender empresas que valorizam responsabilidade, comunicação clara e padrão profissional no suporte à rotina logística.
                         </p>
                         <p>
-                            Mais do que prestar um serviço, buscamos representar melhor a rotina operacional do cliente, transmitindo organização, confiança e seriedade em cada atendimento.
+                            Mais do que executar deslocamentos e apoiar operações, a proposta da marca é transmitir segurança institucional, organização e presença em cada ponto de contato com o cliente.
+                        </p>
+                        <p>
+                            O resultado é uma operação com postura mais sólida, alinhada ao ambiente corporativo e preparada para sustentar relações comerciais com mais credibilidade.
                         </p>
                     </div>
 
-                    <div class="feature-media">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80" alt="Operação logística profissional">
+                    <div class="split-media">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1400&q=80" alt="Operação logística profissional">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section stats" id="operacao">
+    <section class="section dark-section" id="operacao">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <strong>SP + Região</strong>
-                    <span>Atuação estratégica para demandas com mais velocidade e eficiência operacional.</span>
+            <div class="eyebrow">Operação</div>
+            <h2 class="section-title">Uma base operacional voltada para empresas que não podem perder ritmo.</h2>
+            <p class="section-subtitle" style="margin-bottom:42px;">
+                A MVDL atua com foco em clareza de execução, presença profissional e suporte a operações que exigem resposta rápida e padrão corporativo.
+            </p>
+
+            <div class="cards-4">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h4>Atuação regional</h4>
+                    <p>Presença estratégica em São Paulo, Jandira e região metropolitana para demandas que exigem agilidade operacional.</p>
                 </div>
-                <div class="stat-card">
-                    <strong>Atendimento direto</strong>
-                    <span>Comunicação mais rápida para alinhar necessidades comerciais e operacionais.</span>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h4>Contato objetivo</h4>
+                    <p>Comunicação direta para reduzir ruído, facilitar decisões e acelerar o alinhamento com a sua empresa.</p>
                 </div>
-                <div class="stat-card">
-                    <strong>Foco corporativo</strong>
-                    <span>Estrutura pensada para atender empresas com mais clareza e profissionalismo.</span>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-building-shield"></i></div>
+                    <h4>Postura corporativa</h4>
+                    <p>Imagem profissional preparada para representar melhor sua operação diante de clientes e parceiros.</p>
                 </div>
-                <div class="stat-card">
-                    <strong>Apoio logístico</strong>
-                    <span>Suporte para transporte, operação e demandas ligadas ao segmento de alimentos.</span>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h4>Suporte logístico</h4>
+                    <p>Estrutura de apoio para transporte, rotina operacional e demandas ligadas ao segmento de alimentos.</p>
                 </div>
             </div>
         </div>
@@ -1033,34 +1181,34 @@
     <section class="section" id="solucoes">
         <div class="container">
             <div class="eyebrow">Soluções</div>
-            <h2 class="section-title">Serviços para empresas que exigem mais da operação.</h2>
+            <h2 class="section-title">Serviços desenhados para empresas que exigem execução séria e alinhamento rápido.</h2>
             <p class="section-subtitle" style="margin-bottom:42px;">
-                Atuamos com foco em clareza, ritmo operacional e compromisso na execução, apoiando empresas que precisam de resposta rápida e presença profissional.
+                A operação da MVDL foi posicionada para apoiar empresas que precisam de suporte logístico com mais organização, confiabilidade e presença profissional.
             </p>
 
             <div class="cards-4">
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-truck"></i></div>
                     <h4>Transporte operacional</h4>
-                    <p>Deslocamentos e demandas logísticas com foco em execução responsável, agilidade e alinhamento.</p>
+                    <p>Atendimento a deslocamentos e demandas logísticas com foco em responsabilidade, ritmo e previsibilidade.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
                     <h4>Apoio logístico</h4>
-                    <p>Suporte para rotinas operacionais com mais organização, clareza e postura profissional.</p>
+                    <p>Suporte para empresas que precisam de mais clareza, organização e execução profissional na rotina operacional.</p>
                 </div>
 
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
                     <h4>Operações para alimentos</h4>
-                    <p>Atuação em demandas ligadas ao segmento de alimentos, incluindo operações relacionadas à Mega100.</p>
+                    <p>Atuação em operações ligadas ao segmento de alimentos com atenção à exigência e à dinâmica do setor.</p>
                 </div>
 
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
                     <h4>Atendimento corporativo</h4>
-                    <p>Atendimento voltado para empresas que valorizam presença confiável e padrão profissional.</p>
+                    <p>Presença profissional para empresas que valorizam postura institucional e confiança em cada atendimento.</p>
                 </div>
             </div>
         </div>
@@ -1068,29 +1216,29 @@
 
     <section class="section dark-section" id="setores">
         <div class="container">
-            <div class="eyebrow" style="color:#b8c0c8;">Diferenciais</div>
-            <h2 class="section-title">O que fortalece a confiança na MVDL.</h2>
+            <div class="eyebrow">Diferenciais</div>
+            <h2 class="section-title">O que fortalece o valor percebido da operação.</h2>
             <p class="section-subtitle" style="margin-bottom:42px;">
-                Mais do que prometer, buscamos transmitir segurança por meio de postura profissional, alinhamento objetivo e compromisso operacional.
+                A confiança não nasce apenas da entrega. Ela também é construída por postura, linguagem, organização e consistência em cada ponto da jornada.
             </p>
 
             <div class="cards-3">
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
-                    <h4>Postura profissional</h4>
-                    <p>Imagem mais séria e corporativa para representar melhor sua operação diante de clientes e parceiros.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
-                    <h4>Comunicação objetiva</h4>
-                    <p>Atendimento direto, sem ruído, para acelerar alinhamentos e facilitar decisões operacionais.</p>
-                </div>
-
-                <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-shield-heart"></i></div>
                     <h4>Confiabilidade</h4>
-                    <p>Compromisso com responsabilidade, consistência e presença nas demandas da rotina logística.</p>
+                    <p>Compromisso com presença, responsabilidade e constância em demandas que exigem uma postura profissional mais sólida.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h4>Imagem institucional</h4>
+                    <p>Uma marca pensada para transmitir mais seriedade, valor percebido e alinhamento com ambientes corporativos.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                    <h4>Alinhamento rápido</h4>
+                    <p>Atendimento objetivo para acelerar decisões, simplificar o contato e sustentar melhor a rotina operacional.</p>
                 </div>
             </div>
         </div>
@@ -1099,48 +1247,48 @@
     <section class="section">
         <div class="container">
             <div class="eyebrow">Processo</div>
-            <h2 class="section-title">Um fluxo simples, rápido e profissional.</h2>
+            <h2 class="section-title">Um fluxo claro, direto e compatível com operações que exigem agilidade.</h2>
             <p class="section-subtitle" style="margin-bottom:42px;">
-                A proposta é facilitar o primeiro contato, entender a demanda com clareza e executar com responsabilidade.
+                A experiência foi pensada para facilitar o primeiro contato, entender a necessidade com clareza e conduzir a operação com mais segurança.
             </p>
 
             <div class="cards-3">
                 <div class="card">
                     <div class="step-number">01</div>
                     <h4>Contato inicial</h4>
-                    <p>Você apresenta sua necessidade pelo WhatsApp ou Instagram com rapidez e objetividade.</p>
+                    <p>Sua empresa apresenta a necessidade com rapidez pelo WhatsApp ou Instagram, iniciando um contato direto e objetivo.</p>
                 </div>
 
                 <div class="card">
                     <div class="step-number">02</div>
-                    <h4>Alinhamento da demanda</h4>
-                    <p>A operação é entendida com clareza para definir a melhor forma de atendimento para o serviço.</p>
+                    <h4>Leitura da demanda</h4>
+                    <p>O cenário operacional é compreendido com clareza para definir a melhor forma de atendimento e suporte logístico.</p>
                 </div>
 
                 <div class="card">
                     <div class="step-number">03</div>
                     <h4>Execução</h4>
-                    <p>Com o alinhamento feito, a demanda é atendida com compromisso, presença e padrão profissional.</p>
+                    <p>Com o alinhamento concluído, a operação é conduzida com responsabilidade, presença e padrão profissional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="yellow-banner">
-        <div class="container yellow-banner-grid">
+    <section class="section lux-banner">
+        <div class="container lux-banner-grid">
             <div>
-                <h3>Sua operação precisa de resposta rápida e execução séria.</h3>
+                <h3>Sua operação pede mais do que transporte. Ela pede presença, padrão e confiança.</h3>
                 <p>
-                    Se sua empresa busca um parceiro com mais presença, organização e confiabilidade no suporte logístico, a MVDL está pronta para atender com objetividade.
+                    Se a sua empresa precisa de um parceiro com postura profissional, resposta rápida e melhor valor percebido no suporte operacional, a MVDL está preparada para atender com objetividade.
                 </p>
             </div>
 
             <div>
                 <ul class="banner-list">
-                    <li><i class="fa-solid fa-check"></i><span>Atendimento rápido pelo WhatsApp.</span></li>
-                    <li><i class="fa-solid fa-check"></i><span>Atuação em São Paulo, Jandira e região.</span></li>
-                    <li><i class="fa-solid fa-check"></i><span>Foco em demandas corporativas e operacionais.</span></li>
-                    <li><i class="fa-solid fa-check"></i><span>Suporte para operações ligadas a alimentos.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Atendimento direto para alinhamento rápido.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Estrutura pensada para ambientes corporativos.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Atuação regional com mais clareza operacional.</span></li>
+                    <li><i class="fa-solid fa-check"></i><span>Suporte para rotinas ligadas a alimentos e logística.</span></li>
                 </ul>
             </div>
         </div>
@@ -1149,49 +1297,49 @@
     <section class="section faq-section">
         <div class="container">
             <div class="eyebrow">Dúvidas frequentes</div>
-            <h2 class="section-title">Perguntas comuns sobre atendimento e operação.</h2>
+            <h2 class="section-title">Perguntas comuns sobre atendimento, operação e posicionamento.</h2>
             <p class="section-subtitle" style="margin-bottom:42px;">
-                Respostas diretas para facilitar o primeiro contato e deixar o processo mais claro.
+                Respostas claras para tornar o primeiro contato mais simples e transmitir mais segurança antes do alinhamento comercial.
             </p>
 
             <div class="faq-wrap">
                 <div class="faq-item active">
                     <button class="faq-question">
-                        Quais regiões a MVDL atende?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer" style="max-height: 200px;">
-                        <p>A MVDL atua em São Paulo, Jandira e região metropolitana, com foco em demandas logísticas e operacionais que exigem resposta rápida.</p>
+            Quais regiões a MVDL atende?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+                    <div class="faq-answer" style="max-height: 220px;">
+                        <p>A MVDL atua em São Paulo, Jandira e região metropolitana, com foco em operações que exigem mais agilidade, clareza e presença profissional.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        A empresa atende operações para alimentos?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
+            A empresa atende operações ligadas ao segmento de alimentos?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
                     <div class="faq-answer">
-                        <p>Sim. A empresa atua em operações relacionadas ao segmento de alimentos, incluindo demandas ligadas à Mega100.</p>
+                        <p>Sim. A MVDL atende demandas relacionadas ao segmento de alimentos, com suporte alinhado ao nível de exigência e ao ritmo desse tipo de operação.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Como solicitar atendimento?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
+            Como solicitar atendimento?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
                     <div class="faq-answer">
-                        <p>Você pode entrar em contato diretamente pelo WhatsApp ou Instagram para apresentar sua necessidade.</p>
+                        <p>O contato pode ser feito diretamente pelo WhatsApp ou Instagram, permitindo uma leitura inicial da demanda e um alinhamento mais ágil.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        O atendimento é voltado para empresas?
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </button>
+            O posicionamento da empresa é voltado ao mercado corporativo?
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
                     <div class="faq-answer">
-                        <p>Sim. O posicionamento da MVDL é voltado para empresas que precisam de transporte e apoio logístico com padrão profissional.</p>
+                        <p>Sim. A marca foi pensada para transmitir confiança, seriedade e padrão profissional a empresas que valorizam presença institucional no suporte operacional.</p>
                     </div>
                 </div>
             </div>
@@ -1201,7 +1349,8 @@
     <section class="section" id="contato">
         <div class="container contact-grid">
             <div class="contact-form">
-                <h3>Solicite atendimento</h3>
+                <div class="eyebrow">Contato</div>
+                <h3>Solicite um atendimento alinhado ao nível da sua operação.</h3>
                 <form class="form-grid" id="whatsappForm">
                     <div class="form-row">
                         <input type="text" id="nome" placeholder="Seu nome" required>
@@ -1211,22 +1360,22 @@
                     <div class="form-row">
                         <input type="tel" id="telefone" placeholder="Telefone ou WhatsApp" required>
                         <select id="demanda" required>
-                            <option value="">Tipo de demanda</option>
-                            <option>Transporte operacional</option>
-                            <option>Apoio logístico</option>
-                            <option>Operação para alimentos</option>
-                            <option>Parceria comercial</option>
-                        </select>
+              <option value="">Tipo de demanda</option>
+              <option>Transporte operacional</option>
+              <option>Apoio logístico</option>
+              <option>Operação para alimentos</option>
+              <option>Parceria comercial</option>
+            </select>
                     </div>
 
                     <textarea rows="6" id="mensagem" placeholder="Descreva sua necessidade" required></textarea>
 
                     <button type="submit" class="btn btn-primary">
-                        <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
-                    </button>
+            <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+          </button>
 
                     <p class="form-note">
-                        Ao enviar, você será redirecionado ao WhatsApp com a mensagem pronta para agilizar o atendimento.
+                        Ao enviar, você será direcionado ao WhatsApp com uma mensagem pré-estruturada para agilizar o atendimento.
                     </p>
                 </form>
             </div>
@@ -1235,14 +1384,17 @@
 
     <section class="final-cta">
         <div class="container">
-            <h2>Mais presença. Mais organização. Mais confiança para sua operação.</h2>
+            <h2>Uma operação forte também se comunica com força.</h2>
             <p>
-                A MVDL Transportes foi posicionada para transmitir força, seriedade e resposta rápida no atendimento a empresas que precisam de suporte logístico com padrão profissional.
+                A MVDL foi posicionada para transmitir organização, credibilidade e padrão institucional no atendimento a empresas que precisam de mais do que execução: precisam de presença.
             </p>
 
             <div class="final-buttons">
                 <a href="https://www.instagram.com/freitas_mvdl?utm_source=qr" target="_blank" class="btn btn-outline">
                     <i class="fa-brands fa-instagram"></i> Ver Instagram
+                </a>
+                <a href="#contato" class="btn btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i> Solicitar atendimento
                 </a>
             </div>
         </div>
@@ -1256,12 +1408,12 @@
                         <div class="logo-mark">MVDL</div>
                         <div class="logo-text">
                             <strong style="color:#fff;">Transportes</strong>
-                            <span style="color:rgba(255,255,255,.65);">Soluções em logística</span>
+                            <span style="color:rgba(245,241,235,.62);">Soluções em logística</span>
                         </div>
                     </a>
 
-                    <p>
-                        Transporte, apoio logístico e atendimento com postura profissional para empresas em São Paulo, Jandira e região.
+                    <p style="margin-top:18px;">
+                        Transporte, apoio logístico e presença operacional com padrão profissional para empresas em São Paulo, Jandira e região.
                     </p>
                 </div>
 
