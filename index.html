@@ -4,34 +4,30 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVDL Transportes e Distribuição | Operação forte, imagem premium</title>
-    <meta name="description" content="MVDL Transportes e Distribuição. Logística, distribuição, transporte de alimentos e serviços com HR para empresas que exigem presença, firmeza e compromisso." />
-    <meta name="theme-color" content="#050505" />
-    <meta name="robots" content="index, follow" />
-
+    <title>MVDL Transportes e Distribuição</title>
+    <meta name="description" content="MVDL Transportes e Distribuição. Operação com HR para alimentos, distribuição logística, agilidade, organização e atendimento para São Paulo e região." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
     <style>
          :root {
-            --bg: #040404;
-            --bg-2: #0a0a0a;
-            --bg-3: #101010;
-            --card: rgba(255, 255, 255, .045);
-            --card-2: rgba(255, 255, 255, .03);
+            --bg: #0a0b0d;
+            --bg-2: #111317;
+            --panel: #151922;
+            --panel-2: #1a1f29;
             --line: rgba(255, 255, 255, .08);
-            --line-strong: rgba(216, 176, 102, .28);
-            --gold: #c99743;
-            --gold-2: #e7bf7a;
-            --text: #f4f6f8;
-            --muted: #a8afb8;
-            --shadow: 0 24px 80px rgba(0, 0, 0, .45);
-            --radius-xl: 36px;
-            --radius-lg: 26px;
-            --radius-md: 18px;
-            --container: 1240px;
-            --header-height: 86px;
+            --line-strong: rgba(255, 255, 255, .14);
+            --text: #f5f7fb;
+            --muted: #a9b2c3;
+            --gold: #d6a85f;
+            --gold-2: #f0c987;
+            --gold-soft: rgba(214, 168, 95, .18);
+            --accent: #ffffff;
+            --shadow: 0 30px 80px rgba(0, 0, 0, .45);
+            --radius: 28px;
+            --radius-sm: 18px;
+            --container: 1180px;
         }
         
         * {
@@ -45,23 +41,15 @@
         }
         
         body {
-            font-family: "Inter", sans-serif;
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, rgba(214, 168, 95, .10), transparent 28%), radial-gradient(circle at top right, rgba(255, 255, 255, .04), transparent 22%), linear-gradient(180deg, #090a0c 0%, #0d1014 100%);
             color: var(--text);
-            line-height: 1.6;
-            background: radial-gradient(circle at 85% 12%, rgba(201, 151, 67, .12), transparent 18%), radial-gradient(circle at 12% 38%, rgba(201, 151, 67, .07), transparent 18%), linear-gradient(180deg, #020202 0%, #080808 46%, #040404 100%);
-            overflow-x: hidden;
+            line-height: 1.5;
         }
         
         a {
-            color: inherit;
             text-decoration: none;
-        }
-        
-        button,
-        input,
-        textarea,
-        select {
-            font: inherit;
+            color: inherit;
         }
         
         img {
@@ -74,464 +62,345 @@
             margin: 0 auto;
         }
         
-        .section {
-            padding: 110px 0;
-            position: relative;
-        }
-        
-        .skip-link {
-            position: absolute;
-            left: -9999px;
-        }
-        
-        .skip-link:focus {
-            left: 12px;
-            top: 12px;
-            z-index: 9999;
-            background: #fff;
-            color: #000;
-            padding: 10px 14px;
-            border-radius: 8px;
-        }
-        
-        .header {
+        .topbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-            min-height: var(--header-height);
-            background: rgba(4, 4, 4, .82);
             backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(255, 255, 255, .06);
+            background: rgba(10, 11, 13, .78);
+            border-bottom: 1px solid var(--line);
         }
         
-        .nav {
-            min-height: var(--header-height);
+        .topbar-inner {
+            min-height: 78px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 24px;
         }
         
         .brand {
             display: flex;
-            align-items: center;
-            gap: 14px;
-            min-width: 0;
-        }
-        
-        .brand-mark {
-            min-width: 78px;
-            height: 48px;
-            padding: 0 16px;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #ebcb91, #94611d);
-            color: #090909;
-            font-weight: 900;
-            letter-spacing: .14em;
-            box-shadow: 0 10px 30px rgba(201, 151, 67, .24);
-            white-space: nowrap;
-        }
-        
-        .brand-copy {
-            display: flex;
             flex-direction: column;
-            line-height: 1.05;
+            gap: 2px;
         }
         
-        .brand-copy strong {
-            font-size: 1rem;
-            letter-spacing: -.02em;
+        .brand strong {
+            font-size: 1.1rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
         }
         
-        .brand-copy span {
+        .brand span {
             color: var(--muted);
             font-size: .84rem;
+            letter-spacing: .08em;
+            text-transform: uppercase;
         }
         
-        .nav-menu {
+        .nav {
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 18px;
+            flex-wrap: wrap;
         }
         
-        .nav-link {
+        .nav a {
             color: var(--muted);
-            font-weight: 500;
-            transition: .25s ease;
+            font-size: .96rem;
+            transition: .25s;
         }
         
-        .nav-link:hover,
-        .nav-link.active {
+        .nav a:hover {
             color: var(--text);
         }
         
-        .nav-toggle {
-            display: none;
-            width: 48px;
-            height: 48px;
-            border: 0;
-            background: transparent;
-            cursor: pointer;
-        }
-        
-        .nav-toggle span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            margin: 5px auto;
-            background: #fff;
-        }
-        
         .btn {
-            min-height: 56px;
-            padding: 0 26px;
-            border-radius: 999px;
-            border: 1px solid transparent;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #edcf97, #986726);
-            color: #0a0a0a;
-            font-weight: 800;
-            box-shadow: 0 16px 38px rgba(201, 151, 67, .22);
+            min-height: 52px;
+            padding: 0 22px;
+            border-radius: 999px;
+            border: 1px solid var(--line-strong);
             transition: .25s ease;
+            font-weight: 700;
+            letter-spacing: .01em;
             cursor: pointer;
         }
         
         .btn:hover {
             transform: translateY(-2px);
-            opacity: .98;
         }
         
-        .btn-outline {
-            background: transparent;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-2) 100%);
+            color: #16110a;
+            border: none;
+            box-shadow: 0 20px 50px rgba(214, 168, 95, .22);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, .03);
             color: var(--text);
-            border-color: var(--line);
-            box-shadow: none;
-        }
-        
-        .btn-nav {
-            min-height: 44px;
-            padding: 0 18px;
-        }
-        
-        .btn-full {
-            width: 100%;
         }
         
         .hero {
-            min-height: calc(100vh - var(--header-height));
-            display: flex;
-            align-items: center;
-            padding: 76px 0 90px;
+            position: relative;
             overflow: hidden;
-            position: relative;
+            padding: 88px 0 56px;
         }
         
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(100deg, rgba(2, 2, 2, .95) 15%, rgba(2, 2, 2, .82) 50%, rgba(2, 2, 2, .60) 100%), url("https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-            filter: brightness(.40) saturate(.75) contrast(1.05);
-            transform: scale(1.04);
-            z-index: 0;
-        }
-        
-        .hero::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
-            background-size: 42px 42px;
-            opacity: .07;
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .18));
-            z-index: 0;
-        }
-        
-        .hero-layout {
-            position: relative;
-            z-index: 1;
+        .hero-grid {
             display: grid;
-            grid-template-columns: 1.08fr .92fr;
-            gap: 34px;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 32px;
             align-items: center;
         }
         
         .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid var(--line-strong);
+            border-radius: 999px;
             color: var(--gold-2);
-            font-size: .82rem;
-            font-weight: 800;
+            background: rgba(255, 255, 255, .03);
+            font-size: .8rem;
+            letter-spacing: .16em;
             text-transform: uppercase;
-            letter-spacing: .18em;
-            margin-bottom: 20px;
-        }
-        
-        .eyebrow::before {
-            content: "";
-            width: 32px;
-            height: 1px;
-            background: rgba(231, 191, 122, .8);
-        }
-        
-        .hero h1,
-        .section-title h2,
-        .section-center h2,
-        .section-side h2,
-        .contact-copy h2,
-        .statement-box h2,
-        .cta-box h2 {
-            line-height: .98;
-            letter-spacing: -.05em;
+            margin-bottom: 18px;
         }
         
         .hero h1 {
-            font-size: clamp(3.3rem, 6vw, 6.4rem);
-            max-width: 11ch;
-            margin-bottom: 24px;
+            font-size: clamp(2.6rem, 6vw, 5.4rem);
+            line-height: .95;
+            letter-spacing: -.05em;
+            max-width: 12ch;
+            margin-bottom: 18px;
         }
         
         .hero p {
-            max-width: 62ch;
-            color: #c9ced5;
+            color: var(--muted);
             font-size: 1.08rem;
-            margin-bottom: 30px;
+            max-width: 60ch;
+            margin-bottom: 28px;
         }
         
         .hero-actions {
             display: flex;
             gap: 14px;
             flex-wrap: wrap;
-            margin-bottom: 34px;
+            margin-bottom: 30px;
         }
         
-        .hero-strip,
-        .impact-grid,
-        .services-grid,
-        .features-grid,
-        .region-grid {
+        .hero-stats {
             display: grid;
-            gap: 20px;
-        }
-        
-        .hero-strip {
             grid-template-columns: repeat(3, 1fr);
             gap: 14px;
         }
         
-        .strip-card,
-        .hero-panel,
-        .service-card,
-        .feature-card,
-        .region-card,
-        .contact-form,
-        .statement-box,
-        .cta-box,
-        .fleet-showcase,
-        .contact-info-card,
-        .company-box {
-            background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025));
+        .stat {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .045), rgba(255, 255, 255, .02));
             border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: 20px;
             box-shadow: var(--shadow);
         }
         
-        .strip-card {
-            border-radius: 20px;
-            padding: 18px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .strip-card strong {
+        .stat strong {
             display: block;
-            color: var(--gold-2);
+            font-size: 1.55rem;
             margin-bottom: 6px;
-            font-size: 1.04rem;
         }
         
-        .strip-card span {
+        .stat span {
             color: var(--muted);
-            font-size: .92rem;
+            font-size: .93rem;
         }
         
-        .hero-panel {
-            border-radius: var(--radius-xl);
-            padding: 34px;
-            border-color: var(--line-strong);
-            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .022)), radial-gradient(circle at top right, rgba(201, 151, 67, .16), transparent 30%);
-            position: relative;
+        .hero-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+            border: 1px solid var(--line);
+            border-radius: 34px;
             overflow: hidden;
-        }
-        
-        .hero-panel h2 {
-            font-size: clamp(1.6rem, 3vw, 2.5rem);
-            margin-bottom: 16px;
+            box-shadow: var(--shadow);
             position: relative;
-            z-index: 1;
         }
         
-        .hero-panel p {
-            color: var(--muted);
-            margin-bottom: 24px;
-            position: relative;
-            z-index: 1;
+        .hero-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 560px;
+            object-fit: cover;
+            filter: brightness(.62) contrast(1.05) saturate(.95);
         }
         
-        .hero-panel-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            position: relative;
-            z-index: 1;
+        .hero-card-content {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 28px;
+            background: linear-gradient(180deg, transparent, rgba(0, 0, 0, .78));
         }
         
-        .mini-card {
-            border-radius: 18px;
-            padding: 18px;
-            background: rgba(255, 255, 255, .035);
-            border: 1px solid rgba(255, 255, 255, .06);
-        }
-        
-        .mini-card strong {
-            display: block;
+        .hero-card-content strong {
             color: var(--gold-2);
-            margin-bottom: 6px;
-        }
-        
-        .mini-card span {
-            color: var(--muted);
-            font-size: .92rem;
-        }
-        
-        .impact-row {
-            padding: 0 0 14px;
-            margin-top: -22px;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .impact-grid {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-        
-        .impact-card {
-            padding: 26px;
-            background: rgba(255, 255, 255, .03);
-            border-top: 1px solid var(--line-strong);
-            border-bottom: 1px solid var(--line);
-            backdrop-filter: blur(10px);
-        }
-        
-        .impact-card span {
             display: block;
-            color: var(--muted);
             margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            font-size: .8rem;
         }
         
-        .impact-card strong {
-            font-size: 1.16rem;
+        .hero-card-content p {
+            margin: 0;
+            color: #e7ebf4;
+            font-size: 1rem;
+            max-width: 42ch;
         }
         
-        .split,
-        .contact-layout {
-            display: grid;
-            grid-template-columns: .95fr 1.05fr;
-            gap: 36px;
-            align-items: start;
+        .section {
+            padding: 74px 0;
         }
         
-        .section-title h2,
-        .section-center h2,
-        .section-side h2,
-        .contact-copy h2,
-        .statement-box h2,
-        .cta-box h2 {
-            font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-            margin-bottom: 14px;
+        .section-head {
+            margin-bottom: 28px;
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
         }
         
-        .section-text,
-        .section-side {
+        .section-head h2 {
+            font-size: clamp(2rem, 4vw, 3.3rem);
+            line-height: 1;
+            letter-spacing: -.04em;
+            max-width: 12ch;
+        }
+        
+        .section-head p {
+            color: var(--muted);
+            max-width: 62ch;
+        }
+        
+        .services-grid,
+        .features-grid,
+        .contact-grid {
             display: grid;
             gap: 18px;
-        }
-        
-        .section-text p,
-        .section-center p,
-        .section-side p,
-        .service-card p,
-        .feature-card p,
-        .region-card p,
-        .contact-copy p,
-        .form-note,
-        .cta-box p,
-        .fleet-showcase p {
-            color: var(--muted);
-        }
-        
-        .section-center {
-            max-width: 900px;
-            margin: 0 auto 48px;
-            text-align: center;
         }
         
         .services-grid {
-            grid-template-columns: repeat(4, 1fr);
-            margin-bottom: 28px;
+            grid-template-columns: repeat(3, 1fr);
         }
         
-        .service-card {
+        .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            border: 1px solid var(--line);
             border-radius: 26px;
-            padding: 30px 26px;
-            position: relative;
-            overflow: hidden;
+            padding: 26px;
+            box-shadow: var(--shadow);
         }
         
-        .service-card::before {
-            content: "";
-            position: absolute;
-            inset: 0 auto auto 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--gold-2), transparent);
-        }
-        
-        .service-number {
+        .card .tag {
             display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 0 12px;
+            border-radius: 999px;
+            background: var(--gold-soft);
             color: var(--gold-2);
-            font-weight: 900;
+            font-size: .78rem;
+            text-transform: uppercase;
+            letter-spacing: .12em;
             margin-bottom: 16px;
-            font-size: 1.04rem;
         }
         
-        .service-card h3,
-        .feature-card h3 {
-            font-size: 1.25rem;
+        .card h3 {
+            font-size: 1.35rem;
             margin-bottom: 10px;
-            letter-spacing: -.02em;
+            letter-spacing: -.03em;
         }
         
-        .fleet-showcase {
+        .card p {
+            color: var(--muted);
+            font-size: .98rem;
+        }
+        
+        .services-showcase {
+            margin-top: 24px;
             border-radius: 32px;
             overflow: hidden;
             position: relative;
             border: 1px solid var(--line-strong);
+            box-shadow: var(--shadow);
         }
         
-        .fleet-showcase img {
+        .services-showcase img {
+            width: 100%;
+            height: 470px;
+            object-fit: cover;
+            filter: brightness(.58) contrast(1.04);
+        }
+        
+        .services-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0, 0, 0, .86) 10%, rgba(0, 0, 0, .52) 52%, rgba(0, 0, 0, .18) 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 34px;
+        }
+        
+        .services-overlay-content {
+            max-width: 600px;
+        }
+        
+        .services-overlay-content strong {
+            display: block;
+            color: var(--gold-2);
+            font-size: .82rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        
+        .services-overlay-content h3 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            line-height: 1;
+            letter-spacing: -.04em;
+            margin-bottom: 14px;
+        }
+        
+        .services-overlay-content p {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 54ch;
+        }
+        
+        .operations-showcase {
+            margin-top: 28px;
+            border-radius: 32px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--line-strong);
+            background: linear-gradient(180deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .025));
+            box-shadow: var(--shadow);
+        }
+        
+        .operations-showcase img {
             width: 100%;
             height: 460px;
             object-fit: cover;
+            display: block;
             filter: brightness(.55) contrast(1.05) saturate(.85);
         }
         
-        .fleet-overlay {
+        .operations-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(90deg, rgba(0, 0, 0, .88) 12%, rgba(0, 0, 0, .55) 52%, rgba(0, 0, 0, .25) 100%);
@@ -540,11 +409,11 @@
             padding: 34px;
         }
         
-        .fleet-content {
+        .operations-content {
             max-width: 560px;
         }
         
-        .fleet-content strong {
+        .operations-content strong {
             display: block;
             color: var(--gold-2);
             font-size: .85rem;
@@ -553,199 +422,106 @@
             margin-bottom: 12px;
         }
         
-        .fleet-content h3 {
+        .operations-content h3 {
             font-size: clamp(2rem, 4vw, 3.2rem);
             line-height: 1;
             letter-spacing: -.04em;
             margin-bottom: 14px;
         }
         
-        .fleet-content p {
+        .operations-content p {
+            color: var(--muted);
             font-size: 1rem;
             max-width: 52ch;
         }
         
-        .region-grid {
-            grid-template-columns: repeat(3, 1fr);
-            margin-top: 34px;
-        }
-        
-        .region-card {
-            border-radius: 24px;
-            padding: 26px;
-        }
-        
-        .region-card strong {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--gold-2);
-            font-size: 1.08rem;
-        }
-        
-        .features-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        
-        .feature-card {
-            border-radius: 24px;
-            padding: 28px;
-        }
-        
-        .statement-box {
-            border-radius: 30px;
-            padding: 42px;
-            text-align: center;
-            border: 1px solid var(--line-strong);
-        }
-        
-        .contact-copy h2 {
-            font-size: clamp(2.2rem, 4vw, 3.4rem);
-            line-height: 1.02;
-            margin-bottom: 18px;
-            max-width: 12ch;
-        }
-        
-        .contact-info-grid {
+        .about-panel {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-            margin-top: 28px;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+            align-items: stretch;
         }
         
-        .contact-info-card {
-            border-radius: 18px;
-            padding: 18px;
+        .about-box {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+            border: 1px solid var(--line);
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: var(--shadow);
         }
         
-        .contact-info-card strong {
-            display: block;
-            margin-bottom: 8px;
-            color: #f4f6f8;
+        .about-box h3 {
+            font-size: 1.7rem;
+            margin-bottom: 14px;
+            letter-spacing: -.03em;
         }
         
-        .contact-info-card a {
-            color: var(--gold-2);
-            font-weight: 600;
-        }
-        
-        .contact-info-card span {
+        .about-box p,
+        .about-box li {
             color: var(--muted);
         }
         
-        .company-box {
-            margin-top: 22px;
-            padding: 22px;
-            border-radius: 20px;
-            border: 1px solid rgba(216, 176, 102, .18);
-        }
-        
-        .company-box strong {
-            display: block;
-            margin-bottom: 12px;
-            color: var(--gold-2);
-            font-size: 1rem;
-        }
-        
-        .company-box p {
-            margin: 6px 0;
-            color: var(--text);
-        }
-        
-        .contact-form {
-            border-radius: 28px;
-            padding: 30px;
+        .about-box ul {
+            padding-left: 18px;
             display: grid;
-            gap: 18px;
+            gap: 10px;
+            margin-top: 12px;
         }
         
-        .field {
-            display: grid;
-            gap: 8px;
+        .contact-grid {
+            grid-template-columns: 1fr 1fr;
+            align-items: start;
         }
         
-        .field label {
-            color: #edf1f5;
-            font-weight: 600;
-        }
-        
-        .field input,
-        .field select,
-        .field textarea {
-            width: 100%;
-            padding: 16px 18px;
-            border-radius: 14px;
+        .contact-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
             border: 1px solid var(--line);
-            background: rgba(255, 255, 255, .035);
+            border-radius: 28px;
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 18px;
+        }
+        
+        .contact-item {
+            padding: 16px 18px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .02);
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 6px;
+            font-size: .92rem;
+            color: var(--gold-2);
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+        
+        .contact-item span,
+        .contact-item a {
             color: var(--text);
-            outline: none;
-            transition: .2s ease;
-        }
-        
-        .field input:focus,
-        .field select:focus,
-        .field textarea:focus {
-            border-color: rgba(231, 191, 122, .42);
-            background: rgba(255, 255, 255, .055);
-        }
-        
-        .cta-box {
-            border-radius: 34px;
-            padding: 48px;
-            text-align: center;
-            border: 1px solid var(--line-strong);
-            background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02)), radial-gradient(circle at center, rgba(201, 151, 67, .12), transparent 36%);
-        }
-        
-        .cta-box p {
-            max-width: 760px;
-            margin: 0 auto 28px;
-        }
-        
-        .whatsapp-float {
-            position: fixed;
-            right: 18px;
-            bottom: 18px;
-            z-index: 1200;
-            width: 62px;
-            height: 62px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: #fff;
-            box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
-            font-size: 28px;
+            word-break: break-word;
         }
         
         .footer {
-            padding: 34px 0 18px;
-            border-top: 1px solid rgba(255, 255, 255, .08);
-            background: rgba(0, 0, 0, .2);
+            padding: 28px 0 46px;
+            border-top: 1px solid var(--line);
         }
         
-        .footer-top,
-        .footer-bottom {
+        .footer-inner {
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 16px;
-        }
-        
-        .footer-top {
-            padding-bottom: 18px;
-        }
-        
-        .footer-menu {
-            display: flex;
+            justify-content: space-between;
             gap: 18px;
             flex-wrap: wrap;
-        }
-        
-        .footer-menu a,
-        .footer-bottom p,
-        .footer-top p {
             color: var(--muted);
+            font-size: .92rem;
         }
         
         .reveal {
@@ -753,284 +529,168 @@
             transform: none;
         }
         
-        .js-animate .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: opacity .85s ease, transform .85s ease;
-        }
-        
-        .js-animate .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        @media (max-width:1120px) {
-            .hero-layout,
-            .split,
-            .contact-layout {
+        @media (max-width:1080px) {
+            .hero-grid,
+            .about-panel,
+            .contact-grid {
                 grid-template-columns: 1fr;
             }
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            .services-grid,
             .features-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr 1fr;
             }
-            .region-grid {
-                grid-template-columns: 1fr;
+            .hero-card img {
+                min-height: 420px;
             }
         }
         
         @media (max-width:780px) {
-             :root {
-                --header-height: 78px;
-            }
-            .section {
-                padding: 84px 0;
-            }
-            .nav-toggle {
-                display: block;
-            }
-            .nav-menu {
-                position: absolute;
-                top: calc(100% + 1px);
-                left: 16px;
-                right: 16px;
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-                padding: 18px;
-                background: rgba(10, 10, 10, .98);
-                border-radius: 22px;
-                border: 1px solid var(--line);
-                box-shadow: var(--shadow);
-            }
-            .nav-menu.open {
-                display: flex;
-            }
-            .brand-copy span {
+            .nav {
                 display: none;
             }
-            .hero h1,
-            .contact-copy h2 {
-                max-width: none;
+            .hero {
+                padding-top: 62px;
             }
-            .hero-strip,
-            .hero-panel-grid,
-            .impact-grid,
+            .hero-stats,
             .services-grid,
-            .features-grid,
-            .contact-info-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
             }
-            .fleet-showcase img {
+            .hero-card img {
+                min-height: 360px;
+            }
+            .services-showcase img,
+            .operations-showcase img {
                 height: 360px;
             }
-            .fleet-overlay {
-                padding: 24px;
+            .services-overlay,
+            .operations-overlay {
+                padding: 22px;
             }
-            .statement-box,
-            .cta-box,
-            .hero-panel,
-            .contact-form {
-                padding: 28px 22px;
-            }
-            .footer-top,
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
+            .section {
+                padding: 58px 0;
             }
         }
     </style>
 </head>
 
 <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <header class="header">
-        <div class="container nav">
-            <a href="#hero" class="brand" aria-label="MVDL Transportes e Distribuição">
-                <span class="brand-mark">MVDL</span>
-                <div class="brand-copy">
-                    <strong>MVDL Transportes</strong>
-                    <span>Distribuição e operação logística</span>
-                </div>
+    <header class="topbar">
+        <div class="container topbar-inner">
+            <a href="#inicio" class="brand">
+                <strong>MVDL Transportes</strong>
+                <span>Distribuição e operação logística</span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-            <nav class="nav-menu" id="menu">
-                <a href="#hero" class="nav-link active">Início</a>
-                <a href="#sobre" class="nav-link">Empresa</a>
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#regioes" class="nav-link">Atuação</a>
-                <a href="#diferenciais" class="nav-link">Diferenciais</a>
-                <a href="#contato" class="nav-link">Contato</a>
-                <a href="https://wa.me/5511963602617" class="btn btn-nav" target="_blank" rel="noopener noreferrer">
-          Solicitar atendimento
-        </a>
+            <nav class="nav">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#diferenciais">Diferenciais</a>
+                <a href="#empresa">Empresa</a>
+                <a href="#contato">Contato</a>
             </nav>
+
+            <a class="btn btn-primary" href="https://wa.me/5511963602617" target="_blank">
+        Falar no WhatsApp
+      </a>
         </div>
     </header>
 
-    <main id="conteudo">
-        <section class="hero section" id="hero">
-            <div class="container hero-layout">
-                <div class="reveal">
-                    <span class="eyebrow">Logística premium com presença forte</span>
-                    <h1>Uma operação séria precisa de uma marca que pareça séria.</h1>
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero-grid">
+                <div>
+                    <span class="eyebrow">MVDL Transportes e Distribuição</span>
+                    <h1>Distribuição com presença, ritmo e operação que entrega de verdade.</h1>
                     <p>
-                        A MVDL Transportes e Distribuição atende empresas que exigem mais do que transporte. Exigem firmeza comercial, atendimento objetivo, presença operacional e compromisso real com a rotina do negócio.
+                        A MVDL Transportes atua com operação logística e distribuição, com foco em organização, agilidade, compromisso e suporte para rotinas que não podem parar. Estrutura para atender demandas com mais controle, mais presença operacional e mais confiança no
+                        dia a dia.
                     </p>
 
                     <div class="hero-actions">
-                        <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="btn">
-              Falar com a MVDL
+                        <a class="btn btn-primary" href="https://wa.me/5511963602617" target="_blank">
+              Solicitar atendimento
             </a>
-                        <a href="#servicos" class="btn btn-outline">Conhecer serviços</a>
+                        <a class="btn btn-secondary" href="#servicos">
+              Ver serviços
+            </a>
                     </div>
 
-                    <div class="hero-strip">
-                        <div class="strip-card">
-                            <strong>Distribuição</strong>
-                            <span>Fluxo com responsabilidade</span>
-                        </div>
-                        <div class="strip-card">
-                            <strong>Alimentos</strong>
-                            <span>Operação direcionada</span>
-                        </div>
-                        <div class="strip-card">
+                    <div class="hero-stats">
+                        <div class="stat">
                             <strong>HR</strong>
-                            <span>Apoio estratégico</span>
+                            <span>Operação estratégica para distribuição de alimentos e rotinas dedicadas.</span>
+                        </div>
+                        <div class="stat">
+                            <strong>SP</strong>
+                            <span>Base de atendimento em São Paulo, com atuação logística conforme demanda.</span>
+                        </div>
+                        <div class="stat">
+                            <strong>Mega100</strong>
+                            <span>Menção estratégica à operação com transportes de HR para alimentos.</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="reveal">
-                    <div class="hero-panel">
-                        <span class="eyebrow">Presença comercial e operacional</span>
-                        <h2>Atendimento forte, imagem premium e proposta que transmite segurança.</h2>
+                <div class="hero-card">
+                    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1400&q=80" alt="Caminhão em operação logística" />
+                    <div class="hero-card-content">
+                        <strong>Presença operacional</strong>
                         <p>
-                            A MVDL foi posicionada para passar mais robustez no comercial e mais confiança na execução, valorizando a marca e reforçando a percepção de empresa séria.
+                            Logística, distribuição e suporte com imagem mais forte, mais profissional e mais confiável para valorizar a percepção da operação da MVDL.
                         </p>
-
-                        <div class="hero-panel-grid">
-                            <div class="mini-card">
-                                <strong>São Paulo</strong>
-                                <span>Base com relevância comercial</span>
-                            </div>
-                            <div class="mini-card">
-                                <strong>Cotia / Jandira</strong>
-                                <span>Atuação estratégica regional</span>
-                            </div>
-                            <div class="mini-card">
-                                <strong>Mega100</strong>
-                                <span>Referência comercial estratégica</span>
-                            </div>
-                            <div class="mini-card">
-                                <strong>B2B</strong>
-                                <span>Foco real em empresas</span>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="impact-row">
-            <div class="container impact-grid reveal">
-                <div class="impact-card">
-                    <span>Atendimento</span>
-                    <strong>Direto, claro e profissional</strong>
-                </div>
-                <div class="impact-card">
-                    <span>Imagem</span>
-                    <strong>Mais valor percebido no comercial</strong>
-                </div>
-                <div class="impact-card">
-                    <span>Operação</span>
-                    <strong>Mais firmeza na rotina do cliente</strong>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="sobre">
-            <div class="container split">
-                <div class="section-title reveal">
-                    <span class="eyebrow">Empresa</span>
-                    <h2>Uma marca construída para transmitir robustez antes mesmo da primeira negociação.</h2>
-                </div>
-
-                <div class="section-text reveal">
-                    <p>
-                        A MVDL Transportes e Distribuição foi pensada para atender empresas que não podem depender de improviso. O posicionamento é claro: mais seriedade, mais alinhamento e mais presença.
-                    </p>
-                    <p>
-                        A empresa atua com distribuição, transporte de cargas, transporte de alimentos e serviços com caminhão HR, apoiando operações que exigem consistência, resposta e responsabilidade comercial.
-                    </p>
-                    <p>
-                        Mais do que aparecer bem, a marca precisa passar confiança real para fortalecer a negociação e elevar a percepção de valor do serviço.
-                    </p>
                 </div>
             </div>
         </section>
 
         <section class="section" id="servicos">
             <div class="container">
-                <div class="section-center reveal">
-                    <span class="eyebrow">Serviços</span>
-                    <h2>Soluções para empresas que exigem estabilidade, clareza e resposta.</h2>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Serviços</span>
+                        <h2>Atendimento logístico com foco em execução e continuidade.</h2>
+                    </div>
                     <p>
-                        Cada frente foi apresentada para reforçar profissionalismo, valor comercial e capacidade operacional.
+                        Estrutura pensada para apoiar operações de distribuição, transporte de alimentos e demandas que exigem responsabilidade, padrão e resposta rápida.
                     </p>
                 </div>
 
                 <div class="services-grid">
-                    <article class="service-card reveal">
-                        <span class="service-number">01</span>
-                        <h3>Distribuição</h3>
+                    <article class="card">
+                        <span class="tag">Distribuição</span>
+                        <h3>Distribuição urbana e operacional</h3>
                         <p>
-                            Apoio logístico para rotinas de distribuição com foco em fluxo, ritmo operacional e continuidade.
+                            Apoio logístico para entregas e movimentações com mais consistência, organização e ritmo de operação.
                         </p>
                     </article>
 
-                    <article class="service-card reveal">
-                        <span class="service-number">02</span>
-                        <h3>Transporte de cargas</h3>
+                    <article class="card">
+                        <span class="tag">Alimentos</span>
+                        <h3>Transporte para alimentos</h3>
                         <p>
-                            Soluções de transporte com atendimento profissional e alinhamento mais claro com a demanda do cliente.
+                            Operação alinhada para rotinas de abastecimento e transporte com foco em compromisso e atenção ao serviço.
                         </p>
                     </article>
 
-                    <article class="service-card reveal">
-                        <span class="service-number">03</span>
-                        <h3>Transporte de alimentos</h3>
+                    <article class="card">
+                        <span class="tag">HR</span>
+                        <h3>Operação com caminhão HR</h3>
                         <p>
-                            Operação voltada a alimentos, inclusive demandas relacionadas a resfriados e congelados.
-                        </p>
-                    </article>
-
-                    <article class="service-card reveal">
-                        <span class="service-number">04</span>
-                        <h3>Serviços com HR</h3>
-                        <p>
-                            Estrutura para operações com HR, apoiando serviços estratégicos e necessidades específicas do cliente.
+                            Solução estratégica para rotas, distribuição e demandas de operação que pedem agilidade e presença.
                         </p>
                     </article>
                 </div>
 
-                <div class="fleet-showcase reveal">
-                    <img src="https://images.unsplash.com/photo-1501706362039-c6e13b4b59c9?auto=format&fit=crop&w=1600&q=80" alt="Frota de caminhões para operações logísticas e serviços com HR" />
-                    <div class="fleet-overlay">
-                        <div class="fleet-content">
-                            <strong>Frota e operação</strong>
-                            <h3>Estrutura visual forte para destacar serviços com HR.</h3>
+                <div class="services-showcase reveal">
+                    <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80" alt="Centro de distribuição e operação logística" />
+                    <div class="services-overlay">
+                        <div class="services-overlay-content">
+                            <strong>Rotina que exige resposta</strong>
+                            <h3>Distribuição com disciplina operacional e imagem de empresa pronta.</h3>
                             <p>
-                                Uma apresentação mais robusta reforça a percepção de prontidão, capacidade operacional e confiança para empresas que buscam apoio logístico com mais presença.
+                                A proposta da MVDL é comunicar estrutura, confiança e capacidade de execução com uma apresentação mais premium, mais forte e mais alinhada ao nível da operação.
                             </p>
                         </div>
                     </div>
@@ -1038,327 +698,185 @@
             </div>
         </section>
 
-        <section class="section" id="regioes">
-            <div class="container">
-                <div class="split">
-                    <div class="section-title reveal">
-                        <span class="eyebrow">Atuação</span>
-                        <h2>Presença regional para reforçar prontidão, imagem e peso comercial.</h2>
-                    </div>
-
-                    <div class="section-side reveal">
-                        <p>
-                            A atuação em São Paulo, Cotia e Jandira ajuda a MVDL a transmitir uma percepção mais robusta, melhor preparada e mais conectada com operações recorrentes.
-                        </p>
-                        <p>
-                            A menção estratégica à Mega100 também fortalece o discurso comercial em serviços ligados a HR e transporte de alimentos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="region-grid">
-                    <article class="region-card reveal">
-                        <strong>São Paulo</strong>
-                        <p>Base com relevância comercial e maior percepção de presença de mercado.</p>
-                    </article>
-
-                    <article class="region-card reveal">
-                        <strong>Cotia</strong>
-                        <p>Região estratégica para ampliar conexão operacional e proximidade com o atendimento.</p>
-                    </article>
-
-                    <article class="region-card reveal">
-                        <strong>Jandira</strong>
-                        <p>Ponto importante para reforçar cobertura regional e prontidão na operação.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="diferenciais">
             <div class="container">
-                <div class="section-center reveal">
-                    <span class="eyebrow">Diferenciais</span>
-                    <h2>O que faz a MVDL parecer mais premium, mais sólida e mais confiável.</h2>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Diferenciais</span>
+                        <h2>Mais força visual, mais percepção de valor e mais autoridade.</h2>
+                    </div>
                     <p>
-                        O posicionamento forte vem da soma entre imagem, linguagem, atendimento e proposta de operação.
+                        Diferenciais que reforçam posicionamento, melhoram a imagem da empresa e ajudam a transmitir mais confiança para quem avalia a operação.
                     </p>
                 </div>
 
                 <div class="features-grid">
-                    <article class="feature-card reveal">
-                        <h3>Posicionamento premium</h3>
-                        <p>Visual e linguagem construídos para aumentar impacto e valor percebido.</p>
+                    <article class="card">
+                        <span class="tag">Imagem</span>
+                        <h3>Visual mais premium</h3>
+                        <p>
+                            Estrutura visual pensada para dar mais peso, presença e valor percebido para a marca MVDL Transportes.
+                        </p>
                     </article>
 
-                    <article class="feature-card reveal">
-                        <h3>Atendimento objetivo</h3>
-                        <p>Mais clareza no contato para acelerar a negociação e reduzir ruído.</p>
+                    <article class="card">
+                        <span class="tag">Confiança</span>
+                        <h3>Comunicação mais profissional</h3>
+                        <p>
+                            Textos e seções desenhados para apresentar a empresa de forma mais séria, forte e comercial.
+                        </p>
                     </article>
 
-                    <article class="feature-card reveal">
-                        <h3>Imagem de empresa forte</h3>
-                        <p>Apresentação que transmite mais seriedade, mais autoridade e mais confiança.</p>
+                    <article class="card">
+                        <span class="tag">Operação</span>
+                        <h3>Mais conexão com a rotina real</h3>
+                        <p>
+                            Elementos visuais ligados à logística, distribuição e operação ajudam a mostrar capacidade prática.
+                        </p>
                     </article>
+                </div>
 
-                    <article class="feature-card reveal">
-                        <h3>Versatilidade operacional</h3>
-                        <p>Distribuição, cargas, alimentos e HR em uma proposta alinhada à necessidade empresarial.</p>
-                    </article>
-
-                    <article class="feature-card reveal">
-                        <h3>Mais valor comercial</h3>
-                        <p>Uma marca melhor posicionada é percebida com mais respeito e mais peso.</p>
-                    </article>
-
-                    <article class="feature-card reveal">
-                        <h3>Compromisso com continuidade</h3>
-                        <p>O foco não é só executar, mas sustentar a rotina do cliente com consistência.</p>
-                    </article>
+                <div class="operations-showcase reveal">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80" alt="Operação logística com movimentação de cargas e organização de estoque" />
+                    <div class="operations-overlay">
+                        <div class="operations-content">
+                            <strong>Operação logística</strong>
+                            <h3>Estrutura, organização e resposta para rotinas que não podem parar.</h3>
+                            <p>
+                                Uma imagem de operação logística reforça percepção de capacidade, controle e consistência, ajudando a comunicar mais força operacional para a MVDL.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="empresa">
             <div class="container">
-                <div class="statement-box reveal">
-                    <span class="eyebrow">Posicionamento</span>
-                    <h2>Empresa séria não vende só entrega. Vende confiança, presença e capacidade de manter o combinado.</h2>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Empresa</span>
+                        <h2>Uma apresentação mais forte para uma operação que precisa passar confiança.</h2>
+                    </div>
+                    <p>
+                        A MVDL Transportes e Distribuição busca transmitir seriedade, consistência e capacidade operacional para clientes que valorizam organização, compromisso e continuidade no atendimento.
+                    </p>
+                </div>
+
+                <div class="about-panel">
+                    <div class="about-box">
+                        <h3>Posicionamento da MVDL</h3>
+                        <p>
+                            A proposta do site é reforçar uma imagem mais robusta, premium e profissional, conectando a marca com transporte, distribuição, alimentos e operação estratégica com HR.
+                        </p>
+                        <ul>
+                            <li>Atuação com distribuição e transportes de alimentos.</li>
+                            <li>Base operacional em São Paulo / Cotia.</li>
+                            <li>Menção estratégica à Mega100 na operação com HR.</li>
+                            <li>Comunicação mais direta, forte e comercial.</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-box">
+                        <h3>Estrutura de atendimento</h3>
+                        <p>
+                            A empresa atende com foco em suporte operacional, alinhamento logístico e relacionamento mais próximo, ajudando a manter o fluxo das rotinas com mais previsibilidade e confiança.
+                        </p>
+                        <ul>
+                            <li>Atendimento pelo WhatsApp com resposta rápida.</li>
+                            <li>Presença digital com Instagram ativo.</li>
+                            <li>Apresentação preparada para valorizar a operação.</li>
+                            <li>Base para evolução comercial e institucional.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="section" id="contato">
-            <div class="container contact-layout">
-                <div class="contact-copy reveal">
-                    <span class="eyebrow">Contato</span>
-                    <h2>Fale com a MVDL e alinhe a melhor solução para a sua operação.</h2>
-                    <p>
-                        Atendimento direto para empresas que precisam de mais clareza, presença e firmeza na operação logística.
-                    </p>
-
-                    <div class="contact-info-grid">
-                        <div class="contact-info-card">
-                            <strong>WhatsApp / Telefone</strong>
-                            <a href="tel:+5511963602617">+55 11 96360-2617</a>
-                        </div>
-
-                        <div class="contact-info-card">
-                            <strong>Instagram</strong>
-                            <a href="https://www.instagram.com/freitas_mvdl" target="_blank" rel="noopener noreferrer">
-                @freitas_mvdl
-              </a>
-                        </div>
-
-                        <div class="contact-info-card">
-                            <strong>E-mail</strong>
-                            <a href="mailto:katepaula@gmail.com">katepaula@gmail.com</a>
-                        </div>
-
-                        <div class="contact-info-card">
-                            <strong>Base de atendimento</strong>
-                            <span>São Paulo / Cotia</span>
-                        </div>
-
-                        <div class="contact-info-card">
-                            <strong>Horário comercial</strong>
-                            <span>Segunda a sexta, das 08h às 18h</span>
-                        </div>
-
-                        <div class="contact-info-card">
-                            <strong>Atuação</strong>
-                            <span>São Paulo, Cotia, Jandira e região</span>
-                        </div>
-                    </div>
-
-                    <div class="company-box">
-                        <strong>Dados da empresa</strong>
-                        <p><b>Razão social:</b> Paula Akemi Katae LTDA</p>
-                        <p><b>CNPJ:</b> 31.707.381/0001-77</p>
-                        <p><b>Filial:</b> 31.707.381/0002-58</p>
-                    </div>
-                </div>
-
-                <div class="reveal">
-                    <form class="contact-form" id="contactForm">
-                        <div class="field">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="company">Empresa</label>
-                            <input type="text" id="company" name="company" placeholder="Nome da empresa" />
-                        </div>
-
-                        <div class="field">
-                            <label for="phone">Telefone</label>
-                            <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="service">Serviço de interesse</label>
-                            <select id="service" name="service" required>
-                <option value="">Selecione</option>
-                <option value="Distribuição">Distribuição</option>
-                <option value="Transporte de cargas">Transporte de cargas</option>
-                <option value="Transporte de alimentos">Transporte de alimentos</option>
-                <option value="Serviços com HR">Serviços com HR</option>
-                <option value="Parceria comercial">Parceria comercial</option>
-              </select>
-                        </div>
-
-                        <div class="field">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Descreva sua necessidade" required></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-full">Enviar pelo WhatsApp</button>
-                        <p class="form-note">Ao enviar, você será direcionado para o WhatsApp da MVDL.</p>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
             <div class="container">
-                <div class="cta-box reveal">
-                    <span class="eyebrow">MVDL Transportes e Distribuição</span>
-                    <h2>Mais do que logística. Uma presença que fortalece o negócio.</h2>
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Contato</span>
+                        <h2>Fale com a MVDL e avance sua operação com mais apoio.</h2>
+                    </div>
                     <p>
-                        Quando a marca transmite segurança, o atendimento passa confiança e a operação demonstra responsabilidade, o valor percebido sobe junto com a força comercial.
+                        Se você quer alinhar uma demanda, apresentar uma necessidade operacional ou iniciar contato comercial, use os canais abaixo.
                     </p>
-                    <a href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" class="btn">
-            Solicitar atendimento agora
-          </a>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3 style="font-size:1.7rem; margin-bottom:10px;">Atendimento direto</h3>
+                        <p style="color:var(--muted);">
+                            Canal mais rápido para falar sobre transporte, distribuição e operação logística.
+                        </p>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <strong>WhatsApp / Telefone</strong>
+                                <a href="https://wa.me/5511963602617" target="_blank">+55 11 96360-2617</a>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Instagram</strong>
+                                <a href="https://www.instagram.com/freitas_mvdl?utm_source=qr" target="_blank">
+                  @freitas_mvdl
+                </a>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>E-mail</strong>
+                                <span>kateapaula@gmail.com</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Base de atendimento</strong>
+                                <span>São Paulo / Cotia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3 style="font-size:1.7rem; margin-bottom:10px;">Informações institucionais</h3>
+                        <p style="color:var(--muted);">
+                            Dados para composição institucional da empresa dentro da apresentação atual.
+                        </p>
+
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <strong>Razão social</strong>
+                                <span>Paula Akemi Katae LTDA</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>CNPJ matriz</strong>
+                                <span>31.707.381/0001-77</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>CNPJ filial</strong>
+                                <span>31.707.381/0002-58</span>
+                            </div>
+
+                            <div class="contact-item">
+                                <strong>Escopo</strong>
+                                <span>Distribuição, transporte de alimentos e apoio à operação logística.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <a class="whatsapp-float" href="https://wa.me/5511963602617" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" title="Falar no WhatsApp">
-    ✆
-  </a>
-
     <footer class="footer">
-        <div class="container footer-top">
-            <div>
-                <strong>MVDL Transportes e Distribuição</strong>
-                <p>Operação forte, imagem premium e compromisso com a entrega.</p>
-            </div>
-
-            <div class="footer-menu">
-                <a href="#hero">Início</a>
-                <a href="#sobre">Empresa</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#contato">Contato</a>
-            </div>
-        </div>
-
-        <div class="container footer-bottom">
-            <p>&copy; <span id="currentYear"></span> MVDL Transportes e Distribuição. Todos os direitos reservados.</p>
+        <div class="container footer-inner">
+            <span>© 2026 MVDL Transportes e Distribuição. Todos os direitos reservados.</span>
+            <span>Site com posicionamento premium para apresentação comercial e institucional.</span>
         </div>
     </footer>
 
-    <script>
-        const navToggle = document.querySelector(".nav-toggle");
-        const navMenu = document.querySelector(".nav-menu");
-        const navLinks = document.querySelectorAll(".nav-link");
-        const sections = document.querySelectorAll("main section[id]");
-        const revealItems = document.querySelectorAll(".reveal");
-        const currentYear = document.getElementById("currentYear");
-        const contactForm = document.getElementById("contactForm");
-
-        if (navToggle && navMenu) {
-            navToggle.addEventListener("click", () => {
-                const opened = navMenu.classList.toggle("open");
-                navToggle.setAttribute("aria-expanded", String(opened));
-            });
-
-            navLinks.forEach((link) => {
-                link.addEventListener("click", () => {
-                    navMenu.classList.remove("open");
-                    navToggle.setAttribute("aria-expanded", "false");
-                });
-            });
-        }
-
-        function updateActiveMenu() {
-            let currentId = "";
-
-            sections.forEach((section) => {
-                const top = section.offsetTop - 160;
-                const height = section.offsetHeight;
-
-                if (window.scrollY >= top && window.scrollY < top + height) {
-                    currentId = section.getAttribute("id");
-                }
-            });
-
-            navLinks.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + currentId) {
-                    link.classList.add("active");
-                }
-            });
-        }
-
-        window.addEventListener("scroll", updateActiveMenu);
-        window.addEventListener("load", updateActiveMenu);
-
-        if ("IntersectionObserver" in window) {
-            document.body.classList.add("js-animate");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                    }
-                });
-            }, {
-                threshold: 0.12
-            });
-
-            revealItems.forEach((item) => observer.observe(item));
-        } else {
-            revealItems.forEach((item) => item.classList.add("visible"));
-        }
-
-        if (currentYear) {
-            currentYear.textContent = new Date().getFullYear();
-        }
-
-        if (contactForm) {
-            contactForm.addEventListener("submit", (event) => {
-                event.preventDefault();
-
-                const name = document.getElementById("name") ? .value.trim();
-                const company = document.getElementById("company") ? .value.trim();
-                const phone = document.getElementById("phone") ? .value.trim();
-                const service = document.getElementById("service") ? .value;
-                const message = document.getElementById("message") ? .value.trim();
-
-                if (!name || !phone || !service || !message) {
-                    alert("Preencha os campos obrigatórios antes de enviar.");
-                    return;
-                }
-
-                const whatsappMessage = [
-                    "Olá, vim pelo site da MVDL Transportes e Distribuição.",
-                    "",
-                    "Nome: " + name,
-                    "Empresa: " + (company || "Não informado"),
-                    "Telefone: " + phone,
-                    "Serviço de interesse: " + service,
-                    "Mensagem: " + message
-                ].join("\\n");
-
-                const url = "https://wa.me/5511963602617?text=" + encodeURIComponent(whatsappMessage);
-                window.open(url, "_blank");
-                contactForm.reset();
-            });
-        }
-    </script>
 </body>
 
 </html>
